@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Shubham Singh</title>
+  <title>Certifications | Shubham Singh</title>
   <meta name="description"
     content="Shubham Singh — Computer Science Engineering student at KIIT Bhubaneswar. Passionate about AI, software development, and building real-world products." />
   <meta property="og:title" content="Shubham Singh — Portfolio" />
@@ -34,7 +34,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 
   <style>
     @keyframes subtlePulse {
@@ -52,7 +52,7 @@
 <body>
 
   <!-- Skip Link -->
-  <a href="/#main" class="sr-only">Skip to content</a>
+  <a href="#main" class="sr-only">Skip to content</a>
 
   <!-- ============================
      NAVIGATION
@@ -60,7 +60,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container">
       <div class="nav__inner">
-        <a href="/" class="nav__logo" aria-label="Shubham Singh home">
+        <a href="#" class="nav__logo" aria-label="Shubham Singh home">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             aria-hidden="true">
             <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -71,12 +71,12 @@
         </a>
 
         <div class="nav__links" role="list">
-          <a href="/#about" role="listitem">About</a>
-          <a href="/#skills" role="listitem">Skills</a>
-          <a href="/certifications" role="listitem">Certifications</a>
-          <a href="/#projects" role="listitem">Projects</a>
-          <a href="/journey" role="listitem">Journey</a>
-          <a href="/#contact" role="listitem">Contact</a>
+          <a href="../#about" role="listitem">About</a>
+          <a href="../#skills" role="listitem">Skills</a>
+          <a href="/certifications" role="listitem" style="color: var(--color-primary);">Certifications</a>
+          <a href="../#projects" role="listitem">Projects</a>
+          <a href="../journey" role="listitem">Journey</a>
+          <a href="../#contact" role="listitem">Contact</a>
         </div>
 
         <div class="nav__actions">
@@ -97,12 +97,12 @@
     </div>
 
     <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="/#about" onclick="closeMobileMenu()">About</a>
-      <a href="/#skills" onclick="closeMobileMenu()">Skills</a>
+      <a href="../#about" onclick="closeMobileMenu()">About</a>
+      <a href="../#skills" onclick="closeMobileMenu()">Skills</a>
       <a href="/certifications" onclick="closeMobileMenu()">Certifications</a>
-      <a href="/#projects" onclick="closeMobileMenu()">Projects</a>
-      <a href="/journey" onclick="closeMobileMenu()">Journey</a>
-      <a href="/#contact" onclick="closeMobileMenu()">Contact</a>
+      <a href="../#projects" onclick="closeMobileMenu()">Projects</a>
+      <a href="../journey" onclick="closeMobileMenu()">Journey</a>
+      <a href="../#contact" onclick="closeMobileMenu()">Contact</a>
     </nav>
   </nav>
 
@@ -111,42 +111,7 @@
 ============================ -->
   <main id="main">
 
-
-    <section class="section" style="padding-top: clamp(var(--space-12), 10vw, var(--space-16)); min-height: 70vh;">
-      <div class="container">
-        <div class="section__header" style="text-align: center; justify-content: center; margin-bottom: var(--space-12);">
-          <h1 class="hero__name" style="font-size: var(--text-3xl);">Blog</h1>
-          <p class="hero__desc" style="margin-inline: auto;">Thoughts on engineering, AI, and building products.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6);" class="fade-in">
-          
-          <article class="project-card" style="padding: var(--space-6);">
-            <div style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-2);">Engineering</div>
-            <h3 style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-3);">Building AutoSpend AI</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.6;">How I integrated OCR with LLMs to automatically parse complex receipts into structured JSON data.</p>
-            <a href="#" class="btn btn--ghost" style="font-size: var(--text-xs); padding: var(--space-2) var(--space-4);">Read Article</a>
-          </article>
-
-          <article class="project-card" style="padding: var(--space-6);">
-            <div style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-2);">Architecture</div>
-            <h3 style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-3);">Lessons From INSUREFLOW</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.6;">Managing strict validation rules while dealing with the probabilistic nature of Large Language Models.</p>
-            <a href="#" class="btn btn--ghost" style="font-size: var(--text-xs); padding: var(--space-2) var(--space-4);">Read Article</a>
-          </article>
-
-          <article class="project-card" style="padding: var(--space-6);">
-            <div style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-2);">Tutorials</div>
-            <h3 style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-3);">Getting Started With AI Projects</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.6;">A beginner's guide to transitioning from standard web development into building AI-powered SaaS applications.</p>
-            <a href="#" class="btn btn--ghost" style="font-size: var(--text-xs); padding: var(--space-2) var(--space-4);">Read Article</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-
+<p>Certifications not found</p>
   </main>
 
   <!-- FOOTER -->
@@ -161,7 +126,7 @@
           <div style="display: flex; flex-direction: column; gap: var(--space-2);">
             <p style="font-size: var(--text-xs); font-weight: 700; color: var(--color-text); text-transform: uppercase;">Quick Links</p>
             <div class="footer__links" role="list" style="flex-direction: column; gap: var(--space-2);">
-              <a href="/journey" role="listitem">Journey Page</a>
+              <a href="../journey" role="listitem">Journey Page</a>
               <a href="Shubham_singh_Resume.pdf" target="_blank" role="listitem">Resume Link</a>
             </div>
           </div>
@@ -321,6 +286,79 @@
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 
+<script>
+
+    // Custom Cursor Logic
+    if (window.matchMedia("(pointer: fine)").matches) {
+      const cursor = document.createElement('div');
+      cursor.classList.add('custom-cursor');
+      document.body.appendChild(cursor);
+      document.body.classList.add('custom-cursor-active');
+
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let cursorX = mouseX;
+      let cursorY = mouseY;
+      
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      const renderCursor = () => {
+        // smooth trailing effect
+        cursorX += (mouseX - cursorX) * 0.2;
+        cursorY += (mouseY - cursorY) * 0.2;
+        cursor.style.transform = `translate(${cursorX - cursor.offsetWidth / 2}px, ${cursorY - cursor.offsetHeight / 2}px)`;
+        requestAnimationFrame(renderCursor);
+      };
+      requestAnimationFrame(renderCursor);
+
+      const interactiveElements = document.querySelectorAll('a, button, .project-card, .filter-btn, .theme-toggle, .menu-btn');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+      });
+    }
+
+    // Page Transitions
+    document.querySelectorAll('a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        const target = this.getAttribute('target');
+        
+        if (href && href.startsWith('/') && target !== '_blank' && !href.includes('#')) {
+          e.preventDefault();
+          document.body.classList.add('page-fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 350);
+        }
+      });
+    });
+
+    // GitHub API Integration
+    fetch('https://api.github.com/users/Shubham-singh1712')
+      .then(response => response.json())
+      .then(data => {
+        const repos = data.public_repos;
+        if (repos !== undefined) {
+          // Find the card that says "Live Deployments" and swap it to "Public Repos"
+          const cards = document.querySelectorAll('.project-card');
+          cards.forEach(card => {
+            if (card.innerText.includes('Live Deployments')) {
+              const counterSpan = card.querySelector('.counter');
+              if (counterSpan) {
+                counterSpan.setAttribute('data-target', repos);
+                card.querySelector('div:last-child').innerText = 'Public Repos';
+              }
+            }
+          });
+        }
+      })
+      .catch(err => console.log('GitHub fetch error:', err));
+
+</script>
 </body>
 
 </html>

@@ -1368,7 +1368,7 @@ body.page-fade-out {
 
 /* Custom Cursor */
 @media (pointer: fine) {
-  * {
+  body.custom-cursor-active * {
     cursor: none !important;
   }
   .custom-cursor {
@@ -1378,7 +1378,7 @@ body.page-fade-out {
     width: 24px;
     height: 24px;
     border: 2px solid var(--color-primary);
-    background-color: oklch(from var(--color-primary) l c h / 0.1);
+    background-color: var(--color-primary-highlight);
     backdrop-filter: invert(0.1);
     border-radius: 50%;
     pointer-events: none;
@@ -1390,8 +1390,8 @@ body.page-fade-out {
   .custom-cursor.hover {
     width: 64px;
     height: 64px;
-    background-color: oklch(from var(--color-primary) l c h / 0.15);
-    border-color: oklch(from var(--color-primary) l c h / 0.4);
+    background-color: var(--color-primary); opacity: 0.8;
+    border-color: var(--color-primary);
     backdrop-filter: blur(2px) invert(0.1);
   }
 }

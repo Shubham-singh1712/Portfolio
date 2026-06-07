@@ -73,7 +73,7 @@
         <div class="nav__links" role="list">
           <a href="/#about" role="listitem">About</a>
           <a href="/#skills" role="listitem">Skills</a>
-          <a href="/#certifications" role="listitem">Certifications</a>
+          <a href="/certifications" role="listitem">Certifications</a>
           <a href="/#projects" role="listitem">Projects</a>
           <a href="/journey" role="listitem">Journey</a>
           <a href="/#contact" role="listitem">Contact</a>
@@ -99,7 +99,7 @@
     <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
       <a href="/#about" onclick="closeMobileMenu()">About</a>
       <a href="/#skills" onclick="closeMobileMenu()">Skills</a>
-      <a href="/#certifications" onclick="closeMobileMenu()">Certifications</a>
+      <a href="/certifications" onclick="closeMobileMenu()">Certifications</a>
       <a href="/#projects" onclick="closeMobileMenu()">Projects</a>
       <a href="/journey" onclick="closeMobileMenu()">Journey</a>
       <a href="/#contact" onclick="closeMobileMenu()">Contact</a>
@@ -529,20 +529,7 @@
 
     <!-- CONTACT -->
     
-    <!-- BETTER CTA -->
-    <section class="section" style="padding-top: var(--space-20); padding-bottom: var(--space-8);">
-      <div class="container">
-        <div class="contact fade-in" style="background: var(--color-primary-highlight); border-color: var(--color-primary);">
-          <h2 class="contact__title" style="font-size: var(--text-3xl); margin-bottom: var(--space-6);">Let's Build Something Together</h2>
-          <div class="contact__actions" style="justify-content: center;">
-            <a href="#contact" class="btn btn--primary">Hire Me</a>
-            <a href="Shubham_singh_Resume.pdf" target="_blank" class="btn" style="background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-border);">View Resume</a>
-            <a href="https://linkedin.com/" target="_blank" class="btn" style="background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-border);">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </section>
-<section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="contact fade-in">
           <p class="contact__eyebrow">Get in Touch</p>
@@ -561,6 +548,7 @@
               </svg>
               Say Hello
             </a>
+            <a href="Shubham_singh_Resume.pdf" target="_blank" class="btn btn--ghost">View Resume</a>
             <a href="https://www.linkedin.com/in/shubham-singh-579059216/" target="_blank" rel="noopener noreferrer"
               class="btn btn--ghost">
               LinkedIn
@@ -755,6 +743,7 @@
       const cursor = document.createElement('div');
       cursor.classList.add('custom-cursor');
       document.body.appendChild(cursor);
+      document.body.classList.add('custom-cursor-active');
 
       let mouseX = window.innerWidth / 2;
       let mouseY = window.innerHeight / 2;
