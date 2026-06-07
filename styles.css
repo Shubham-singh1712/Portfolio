@@ -1368,32 +1368,30 @@ body.page-fade-out {
 
 /* Custom Cursor */
 @media (pointer: fine) {
-  body {
-    cursor: none;
-  }
-  a, button, .project-card, .filter-btn, .theme-toggle, .menu-btn {
-    cursor: none;
+  * {
+    cursor: none !important;
   }
   .custom-cursor {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border: 2px solid var(--color-primary);
+    background-color: oklch(from var(--color-primary) l c h / 0.1);
+    backdrop-filter: invert(0.1);
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 999999;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background-color 0.2s, mix-blend-mode 0.2s;
-    mix-blend-mode: difference;
+    transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s, border-color 0.2s;
     box-sizing: border-box;
   }
   .custom-cursor.hover {
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-primary);
-    mix-blend-mode: difference;
-    border-color: transparent;
+    width: 64px;
+    height: 64px;
+    background-color: oklch(from var(--color-primary) l c h / 0.15);
+    border-color: oklch(from var(--color-primary) l c h / 0.4);
+    backdrop-filter: blur(2px) invert(0.1);
   }
 }
