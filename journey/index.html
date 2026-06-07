@@ -81,78 +81,264 @@
   <!-- ============================
      MAIN
 ============================ -->
-  <main id="main">
+    <main id="main">
 
-
-    <section class="section" style="padding-top: clamp(var(--space-12), 10vw, var(--space-16));">
-      <div class="container">
-        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: var(--space-16); gap: var(--space-4);">
-          <h1 style="font-family: var(--font-display); font-size: clamp(3rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; color: var(--color-text);">My Journey</h1>
+    <!-- PREMIUM HERO -->
+    <section class="hero-premium">
+      <div class="container hero-premium__content">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4);">
+          <h1 style="font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; color: var(--color-text);">My Journey</h1>
           <p style="font-size: var(--text-lg); color: var(--color-text-muted); max-width: 600px; margin-inline: auto;">The path so far, and where I'm heading next.</p>
         </div>
-
-        <div style="max-width: 600px; margin-inline: auto; position: relative; padding-left: var(--space-8); border-left: 2px solid var(--color-divider);">
-          
-          <div class="fade-in" style="position: relative; margin-bottom: var(--space-10);">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Step 1</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Started Programming</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Wrote my first lines of code and discovered a passion for problem-solving.</p>
-          </div>
-
-          <div class="fade-in" style="position: relative; margin-bottom: var(--space-10);">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Step 2</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Learned C & Python</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Built a strong foundation in data structures, algorithms, and logic.</p>
-          </div>
-
-          <div class="fade-in" style="position: relative; margin-bottom: var(--space-10);">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Step 3</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Built Cricket Game</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Applied programming concepts to create an interactive text/web-based cricket simulation.</p>
-          </div>
-
-          <div class="fade-in" style="position: relative; margin-bottom: var(--space-10);">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Step 4</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Built AI Chatbot</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Dove into LLMs and API integrations to build conversational context-aware AI.</p>
-          </div>
-
-          <div class="fade-in" style="position: relative; margin-bottom: var(--space-10);">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Step 5</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Built INSUREFLOW AI</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Developed a complex React/FastAPI application for automated claims processing.</p>
-          </div>
-
-          <div class="fade-in" style="position: relative; margin-bottom: var(--space-10);">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Step 6</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Built AutoSpend AI</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Created a full-stack expense tracker using AI to extract transaction data from images and text.</p>
-          </div>
-
-          <div class="fade-in" style="position: relative; margin-bottom: var(--space-10);">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Step 7</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Started Exploring Freelancing</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Began applying skills to real-world client problems and collaborating with others.</p>
-          </div>
-
-          <div class="fade-in" style="position: relative;">
-            <div style="position: absolute; left: calc(var(--space-8) * -1 - 7px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-primary); border: 2px solid var(--color-primary); box-shadow: 0 0 10px var(--color-primary);"></div>
-            <p style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Present</p>
-            <h3 style="font-size: var(--text-lg); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2);">Current Goal: Building AI-powered SaaS products</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Fusing generative AI with intuitive frontend interfaces to solve complex workflow problems.</p>
-          </div>
-
+        
+        <div class="scroll-indicator" id="scrollIndicator">
+          <span style="font-size: var(--text-xs); font-weight: 600; color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.1em;">Scroll to Explore</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+          </svg>
         </div>
       </div>
     </section>
 
+    <!-- STATS -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="section__header" style="justify-content: center; margin-bottom: var(--space-8);">
+          <h2 class="section__title" style="font-size: var(--text-xl);">Journey Highlights</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4);" class="fade-in">
+          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
+            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="3">0</span>+</div>
+            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">AI Projects Built</div>
+          </div>
+          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
+            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="4">0</span>+</div>
+            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">Certifications</div>
+          </div>
+          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
+            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="3">0</span>+</div>
+            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">Live Deployments</div>
+          </div>
+          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
+            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="100">0</span>+</div>
+            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">GitHub Commits</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-layout">
+      <div class="container" style="width: 100%;">
+        <div class="timeline-wrapper" id="timelineWrapper">
+          <div class="timeline-line-bg"></div>
+          <div class="timeline-progress-line" id="timelineProgress"></div>
+
+          <!-- STEP 1 -->
+          <article class="journey-card observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon"><i data-lucide="code-xml"></i></div>
+              <div>
+                <div class="journey-card__step">Step 1</div>
+                <h3 class="journey-card__title">Started Programming</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p><strong>What was built:</strong> Wrote my first lines of code, focusing on fundamental logic.</p>
+              <p><strong>Why it mattered:</strong> This sparked my passion for problem-solving and computer science.</p>
+            </div>
+            <div class="learning-section">
+              <h4>What I Learned</h4>
+              <ul class="learning-list">
+                <li><i data-lucide="check" width="16" height="16"></i> Logic formulation</li>
+                <li><i data-lucide="check" width="16" height="16"></i> Basic syntax</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- STEP 2 -->
+          <article class="journey-card observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon"><i data-lucide="terminal"></i></div>
+              <div>
+                <div class="journey-card__step">Step 2</div>
+                <h3 class="journey-card__title">Learned C & Python</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p><strong>What was built:</strong> Transitioned from basic scripting to structured programming, mastering memory management and algorithms.</p>
+              <p><strong>Why it mattered:</strong> Gave me the deep technical foundation needed to build scalable backend systems later on.</p>
+              <div class="project-card__tags" style="margin-top: var(--space-4);">
+                <span class="tag">C</span>
+                <span class="tag">Python</span>
+                <span class="tag">DSA</span>
+              </div>
+            </div>
+            <div class="learning-section">
+              <h4>What I Learned</h4>
+              <ul class="learning-list">
+                <li><i data-lucide="check" width="16" height="16"></i> Data Structures</li>
+                <li><i data-lucide="check" width="16" height="16"></i> Algorithms</li>
+                <li><i data-lucide="check" width="16" height="16"></i> Memory Management</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- STEP 3 -->
+          <article class="journey-card observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon"><i data-lucide="trophy"></i></div>
+              <div>
+                <div class="journey-card__step">Step 3</div>
+                <h3 class="journey-card__title">Built Cricket Game</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p><strong>What was built:</strong> Created my first interactive simulation project modeling cricket mechanics and scoring.</p>
+              <p><strong>Why it mattered:</strong> Taught me how to structure larger applications and manage complex application state.</p>
+              <div class="project-card__tags" style="margin-top: var(--space-4);">
+                <span class="tag">Python</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="learning-section">
+              <h4>What I Learned</h4>
+              <ul class="learning-list">
+                <li><i data-lucide="check" width="16" height="16"></i> Game Logic</li>
+                <li><i data-lucide="check" width="16" height="16"></i> State Management</li>
+                <li><i data-lucide="check" width="16" height="16"></i> Object-Oriented Design</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- STEP 4 -->
+          <article class="journey-card observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon"><i data-lucide="bot"></i></div>
+              <div>
+                <div class="journey-card__step">Step 4</div>
+                <h3 class="journey-card__title">Built AI Chatbot</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p><strong>What was built:</strong> Integrated Large Language Models (LLMs) to create a conversational, context-aware AI assistant.</p>
+              <p><strong>Why it mattered:</strong> My entry point into the generative AI space, teaching me how to interface with powerful APIs.</p>
+              <div class="project-card__tags" style="margin-top: var(--space-4);">
+                <span class="tag">LLMs</span>
+                <span class="tag">Python</span>
+                <span class="tag">APIs</span>
+              </div>
+            </div>
+            <div class="learning-section">
+              <h4>What I Learned</h4>
+              <ul class="learning-list">
+                <li><i data-lucide="check" width="16" height="16"></i> Prompt Engineering</li>
+                <li><i data-lucide="check" width="16" height="16"></i> API Integration</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- STEP 5 -->
+          <article class="journey-card observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon"><i data-lucide="shield-check"></i></div>
+              <div>
+                <div class="journey-card__step">Step 5</div>
+                <h3 class="journey-card__title">Built INSUREFLOW AI</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p><strong>What was built:</strong> Developed a complex React and FastAPI application for automated insurance claims processing.</p>
+              <p><strong>Why it mattered:</strong> Showcased my ability to build robust, full-stack enterprise-grade solutions.</p>
+              <div class="project-card__tags" style="margin-top: var(--space-4);">
+                <span class="tag">React</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="learning-section">
+              <h4>What I Learned</h4>
+              <ul class="learning-list">
+                <li><i data-lucide="check" width="16" height="16"></i> UI Development</li>
+                <li><i data-lucide="check" width="16" height="16"></i> Database Design</li>
+                <li><i data-lucide="check" width="16" height="16"></i> System Architecture</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- STEP 6 -->
+          <article class="journey-card observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon"><i data-lucide="wallet"></i></div>
+              <div>
+                <div class="journey-card__step">Step 6</div>
+                <h3 class="journey-card__title">Built AutoSpend AI</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p><strong>What was built:</strong> Created an AI-powered expense tracker capable of extracting transaction data directly from images using OCR and Gemini.</p>
+              <p><strong>Why it mattered:</strong> Solved a real-world friction point with a highly intuitive, seamless user experience.</p>
+              <div class="project-card__tags" style="margin-top: var(--space-4);">
+                <span class="tag">Gemini AI</span>
+                <span class="tag">OCR</span>
+                <span class="tag">React</span>
+                <span class="tag">TailwindCSS</span>
+              </div>
+            </div>
+            <div class="learning-section">
+              <h4>What I Learned</h4>
+              <ul class="learning-list">
+                <li><i data-lucide="check" width="16" height="16"></i> AI Vision APIs</li>
+                <li><i data-lucide="check" width="16" height="16"></i> UX Polish</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- STEP 7 -->
+          <article class="journey-card observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon"><i data-lucide="briefcase"></i></div>
+              <div>
+                <div class="journey-card__step">Step 7</div>
+                <h3 class="journey-card__title">Started Exploring Freelancing</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p><strong>What was built:</strong> Began applying my engineering skills to help real-world clients solve business problems.</p>
+              <p><strong>Why it mattered:</strong> Shifted my mindset from purely technical building to product-focused, business-oriented delivery.</p>
+            </div>
+            <div class="learning-section">
+              <h4>What I Learned</h4>
+              <ul class="learning-list">
+                <li><i data-lucide="check" width="16" height="16"></i> Client Communication</li>
+                <li><i data-lucide="check" width="16" height="16"></i> Scoping Projects</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- FINAL STEP -->
+          <article class="journey-card journey-card--final observer-card">
+            <div class="journey-card__header">
+              <div class="journey-card__icon" style="background: var(--color-primary); color: white;"><i data-lucide="rocket"></i></div>
+              <div>
+                <div class="journey-card__step">Present / Future</div>
+                <h3 class="journey-card__title">What's Next?</h3>
+              </div>
+            </div>
+            <div class="journey-card__content">
+              <p>My ongoing focus is fusing generative AI with intuitive frontend interfaces to solve complex workflow problems.</p>
+              <div class="learning-list" style="margin-top: var(--space-6); grid-template-columns: 1fr;">
+                <li style="font-weight: 500; color: var(--color-text);"><i data-lucide="arrow-right" width="16" height="16"></i> Building AI-powered SaaS products</li>
+                <li style="font-weight: 500; color: var(--color-text);"><i data-lucide="arrow-right" width="16" height="16"></i> Exploring Cloud Computing & Scalability</li>
+                <li style="font-weight: 500; color: var(--color-text);"><i data-lucide="arrow-right" width="16" height="16"></i> Growing through Freelancing & Open Source</li>
+                <li style="font-weight: 500; color: var(--color-text);"><i data-lucide="arrow-right" width="16" height="16"></i> Mastering System Design</li>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -181,7 +367,9 @@
   <!-- ============================
      SCRIPTS
 ============================ -->
-  <script>
+    <script>
+    lucide.createIcons();
+    
     // Dark/light mode toggle with localStorage sync
     (function () {
       const t = document.querySelector('[data-theme-toggle]');
@@ -207,42 +395,6 @@
       }
     })();
 
-    // Typewriter effect
-    (function () {
-      const roles = [
-        'Computer science Engineer',
-        'Tech Explorer',
-        'Web Developer',
-        'Startup Enthusiast',
-        'Video Creator'
-      ];
-      const el = document.getElementById('typedText');
-      if (!el) return;
-      let roleIdx = 0, charIdx = 0, deleting = false;
-      function type() {
-        const current = roles[roleIdx];
-        if (!deleting) {
-          el.textContent = current.slice(0, charIdx + 1);
-          charIdx++;
-          if (charIdx === current.length) {
-            deleting = true;
-            setTimeout(type, 1800);
-            return;
-          }
-          setTimeout(type, 80);
-        } else {
-          el.textContent = current.slice(0, charIdx - 1);
-          charIdx--;
-          if (charIdx === 0) {
-            deleting = false;
-            roleIdx = (roleIdx + 1) % roles.length;
-          }
-          setTimeout(type, 40);
-        }
-      }
-      setTimeout(type, 600);
-    })();
-
     // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -261,6 +413,84 @@
       btt.classList.toggle('visible', window.scrollY > 400);
     }, { passive: true });
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Animated Counters
+    const counters = document.querySelectorAll('.counter');
+    if(counters.length > 0) {
+      const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = +entry.target.getAttribute('data-target');
+            let count = 0;
+            const speed = target / 50; 
+            
+            const updateCount = () => {
+              count += speed;
+              if (count < target) {
+                entry.target.innerText = Math.ceil(count);
+                requestAnimationFrame(updateCount);
+              } else {
+                entry.target.innerText = target;
+              }
+            };
+            updateCount();
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+      const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.5 });
+      counters.forEach(counter => counterObserver.observe(counter));
+    }
+
+    // Parallax + Scroll Indicator Fade + Timeline Fill
+    const root = document.documentElement;
+    const indicator = document.getElementById('scrollIndicator');
+    const timelineWrapper = document.getElementById('timelineWrapper');
+    
+    window.addEventListener('scroll', () => {
+      // Parallax
+      const scrollY = window.scrollY;
+      if (scrollY < 800) {
+        root.style.setProperty('--parallax-y', `${scrollY * 0.15}px`);
+      }
+      
+      // Fade Indicator
+      if (scrollY > 50 && indicator) {
+        indicator.classList.add('hidden');
+      } else if(indicator) {
+        indicator.classList.remove('hidden');
+      }
+
+      // Timeline Fill
+      if(timelineWrapper) {
+        const rect = timelineWrapper.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        
+        const startOffset = viewportHeight * 0.6; // Start filling when top is 60% down viewport
+        let progress = 0;
+        
+        if (rect.top < startOffset) {
+            const distance = startOffset - rect.top;
+            const maxDistance = rect.height;
+            progress = Math.min(Math.max(distance / maxDistance, 0), 1);
+        }
+        root.style.setProperty('--scroll-progress', progress);
+      }
+    }, {passive: true});
+
+    // Intersection Observer for Cards
+    const cards = document.querySelectorAll('.observer-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add staggered delay based on index if multiple enter at once
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+    cards.forEach(card => cardObserver.observe(card));
+
   </script>
 
 </body>
