@@ -495,6 +495,78 @@
 
   </script>
 
+<script>
+
+    // Custom Cursor Logic
+    if (window.matchMedia("(pointer: fine)").matches) {
+      const cursor = document.createElement('div');
+      cursor.classList.add('custom-cursor');
+      document.body.appendChild(cursor);
+
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let cursorX = mouseX;
+      let cursorY = mouseY;
+      
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      const renderCursor = () => {
+        // smooth trailing effect
+        cursorX += (mouseX - cursorX) * 0.2;
+        cursorY += (mouseY - cursorY) * 0.2;
+        cursor.style.transform = `translate(${cursorX - cursor.offsetWidth / 2}px, ${cursorY - cursor.offsetHeight / 2}px)`;
+        requestAnimationFrame(renderCursor);
+      };
+      requestAnimationFrame(renderCursor);
+
+      const interactiveElements = document.querySelectorAll('a, button, .project-card, .filter-btn, .theme-toggle, .menu-btn');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+      });
+    }
+
+    // Page Transitions
+    document.querySelectorAll('a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        const target = this.getAttribute('target');
+        
+        if (href && href.startsWith('/') && target !== '_blank' && !href.includes('#')) {
+          e.preventDefault();
+          document.body.classList.add('page-fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 350);
+        }
+      });
+    });
+
+    // GitHub API Integration
+    fetch('https://api.github.com/users/Shubham-singh1712')
+      .then(response => response.json())
+      .then(data => {
+        const repos = data.public_repos;
+        if (repos !== undefined) {
+          // Find the card that says "Live Deployments" and swap it to "Public Repos"
+          const cards = document.querySelectorAll('.project-card');
+          cards.forEach(card => {
+            if (card.innerText.includes('Live Deployments')) {
+              const counterSpan = card.querySelector('.counter');
+              if (counterSpan) {
+                counterSpan.setAttribute('data-target', repos);
+                card.querySelector('div:last-child').innerText = 'Public Repos';
+              }
+            }
+          });
+        }
+      })
+      .catch(err => console.log('GitHub fetch error:', err));
+
+</script>
 </body>
 
 </html>
