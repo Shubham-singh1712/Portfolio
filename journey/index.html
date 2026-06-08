@@ -3,264 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Journey | Shubham Singh</title>
+  <title>Journey | Shubham Singh</title>
   <link rel="stylesheet" href="../styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <style>
-    .story-section { padding: 4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .story-section:last-child { border-bottom: none; }
-  </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- GLOBAL NAVIGATION -->
   <nav class="nav-premium">
     <div class="container">
       <a href="../index.html" class="nav-logo">Shubham Singh</a>
       <div class="nav-links">
+        <a href="../index.html">Home</a>
         <a href="../index.html#about">About</a>
         <a href="../projects/index.html">Projects</a>
-        <a href="../journey/index.html" style="color: var(--accent-primary);">Journey</a>
+        <a href="index.html" style="color: var(--accent-primary);">Journey</a>
         <a href="../certifications/index.html">Certifications</a>
       </div>
-      <button class="menu-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="section-premium" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: var(--nav-height); position: relative; overflow: hidden;">
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60vw; height: 60vw; background: radial-gradient(circle, var(--accent-primary) 0%, transparent 60%); opacity: 0.05; pointer-events: none;"></div>
-    <div class="container reveal-up">
-      <div class="pill-group" style="justify-content: center; margin-bottom: 1.5rem;">
-        <span class="pill" style="border: 1px solid var(--accent-secondary); background: transparent; color: var(--accent-primary); font-family: var(--font-mono); border-radius: 50px;">Student → Developer → AI Builder → Freelancer → Founder</span>
-      </div>
-      <h1 class="heading-massive" style="font-size: clamp(4rem, 10vw, 10rem);">The Journey</h1>
-      <p class="text-body" style="margin: 2rem auto; max-width: 700px; font-size: 1.25rem;">
+  <!-- HERO SECTION -->
+  <section class="section-premium" style="padding-top: calc(var(--nav-height) + 4rem); padding-bottom: 2rem;">
+    <div class="container text-center reveal-up">
+      <h1 class="heading-massive" style="font-size: clamp(3rem, 8vw, 8rem); margin-bottom: 1rem;">The Journey</h1>
+      <p class="text-body" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">
         From writing my first lines of code to building AI-powered products and exploring entrepreneurship.
       </p>
     </div>
   </section>
 
-  <!-- SECTION 1 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">Where It Started</h2>
-      <div class="glow-card" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <h3 class="heading-card" style="font-size: 2rem; color: var(--accent-primary); margin-bottom: 1rem;">Started Programming</h3>
-        <p class="text-body" style="font-size: 1.15rem; margin-bottom: 2rem;">Discovered programming through curiosity and became fascinated by solving problems through code.</p>
-        
-        <div class="bento-grid-2">
-            <div>
-                <h4 style="font-family: var(--font-mono); color: white; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.85rem;">Learned</h4>
-                <div class="pill-group" style="justify-content: center;">
-                    <span class="pill">Logic Building</span>
-                    <span class="pill">Problem Solving</span>
-                    <span class="pill">Programming Fundamentals</span>
-                </div>
-            </div>
-            <div>
-                <h4 style="font-family: var(--font-mono); color: white; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.85rem;">Technologies</h4>
-                <div class="pill-group" style="justify-content: center;">
-                    <span class="pill" style="border-color: var(--accent-primary); color: var(--accent-primary);">C</span>
-                    <span class="pill" style="border-color: var(--accent-primary); color: var(--accent-primary);">Python</span>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 2 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">Building Foundations</h2>
-      <p class="text-body" style="font-size: 1.15rem; margin-bottom: 3rem; max-width: 800px;">These core concepts became the unbreakable foundation for all the larger, more complex scalable systems I build today.</p>
+  <!-- JOURNEY CHAPTERS -->
+  <section class="section-premium" style="padding-top: 0;">
+    <div class="container" style="max-width: 800px;">
       
-      <div class="bento-grid">
-        <div class="glow-card">
-            <h3 class="heading-card">Data Structures & Algorithms</h3>
-            <p class="text-body" style="font-size: 0.95rem;">Mastered the core building blocks required to write highly efficient, optimized code for complex logical operations.</p>
-        </div>
-        <div class="glow-card">
-            <h3 class="heading-card">Web Development</h3>
-            <p class="text-body" style="font-size: 0.95rem;">Learned how to construct the bridge between abstract data and intuitive human-facing interfaces.</p>
-        </div>
-        <div class="glow-card">
-            <h3 class="heading-card">Databases</h3>
-            <p class="text-body" style="font-size: 0.95rem;">Explored data persistence, schema design, and querying to build robust stateful applications.</p>
-        </div>
-        <div class="glow-card">
-            <h3 class="heading-card">Git & GitHub</h3>
-            <p class="text-body" style="font-size: 0.95rem;">Embraced version control, enabling collaboration, safe experimentation, and structured deployments.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">First Real Projects</h2>
-      <div class="glow-card" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-        <div style="flex: 1; min-width: 300px;">
-            <h3 class="heading-card" style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;">Cricket Game</h3>
-            <p class="text-body" style="font-size: 1.15rem; margin-bottom: 2rem;">My first complete project that taught me how to convert abstract ideas and rules into working, interactive software.</p>
-            <h4 style="font-family: var(--font-mono); color: white; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.85rem;">Lessons</h4>
-            <div class="pill-group">
-                <span class="pill">Application Logic</span>
-                <span class="pill">User Experience</span>
-                <span class="pill">Project Structure</span>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">Entering the AI World</h2>
-      <div class="glow-card" style="border-color: rgba(245, 158, 11, 0.3);">
-        <h3 class="heading-card" style="font-size: 2.5rem; margin-bottom: 1rem;">AI Chatbot</h3>
-        <p class="text-body" style="font-size: 1.15rem; margin-bottom: 2rem;">Built conversational AI systems and explored prompt engineering, external APIs, context handling, and LLM workflows.</p>
-        <h4 style="font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 1rem; text-transform: uppercase; font-size: 0.85rem;">Skills Learned</h4>
-        <div class="pill-group">
-            <span class="pill">AI Integration</span>
-            <span class="pill">Prompt Engineering</span>
-            <span class="pill">API Design</span>
-            <span class="pill">Frontend + Backend Integration</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">Building Real Products</h2>
-      
-      <div class="bento-grid-2">
-        <div class="glow-card">
-            <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">FinTech SaaS</span></div>
-            <h3 class="heading-card" style="font-size: 2rem;">AutoSpend AI</h3>
-            <div style="margin: 1.5rem 0;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem;">The Problem</h4>
-                <p class="text-body" style="font-size: 0.95rem;">Manual expense tracking from receipts and screenshots is incredibly tedious and error-prone.</p>
-            </div>
-            <div style="margin: 1.5rem 0;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem;">The Solution</h4>
-                <p class="text-body" style="font-size: 0.95rem;">An AI-powered extraction platform featuring smart categorization and analytics dashboards.</p>
-            </div>
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem;">Tech Stack & Learnings</h4>
-            <div class="pill-group">
-                <span class="pill">React</span><span class="pill">FastAPI</span><span class="pill">AI OCR</span><span class="pill">Complex State Mgmt</span>
-            </div>
-        </div>
-
-        <div class="glow-card">
-            <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">InsurTech SaaS</span></div>
-            <h3 class="heading-card" style="font-size: 2rem;">INSUREFLOW AI</h3>
-            <div style="margin: 1.5rem 0;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem;">The Problem</h4>
-                <p class="text-body" style="font-size: 0.95rem;">Insurance claim workflows are bogged down by unstructured documents and manual verification.</p>
-            </div>
-            <div style="margin: 1.5rem 0;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem;">The Solution</h4>
-                <p class="text-body" style="font-size: 0.95rem;">An intelligent pipeline that automatically parses, validates, and routes claims based on LLM analysis.</p>
-            </div>
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem;">Tech Stack & Learnings</h4>
-            <div class="pill-group">
-                <span class="pill">Next.js</span><span class="pill">LangChain</span><span class="pill">Vector DBs</span><span class="pill">Workflow Automation</span>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 6 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">Open Source & Collaboration</h2>
-      <div class="glow-card" style="text-align: center; padding: 4rem 2rem;">
-        <p class="text-body" style="font-size: 1.5rem; max-width: 800px; margin: 0 auto; color: white;">
-            Selected as a contributor in major open-source programs. I started collaborating with broader developer communities, learning how to write code that scales not just technically, but collaboratively across remote teams.
+      <!-- Chapter 1 -->
+      <div class="glass-card reveal-up" style="margin-bottom: 2rem; padding: 3rem;">
+        <h4 style="font-family: var(--font-mono); color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">Chapter 1</h4>
+        <h2 class="heading-section" style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display); text-transform: none;">Student (Where It Started)</h2>
+        <p class="text-body" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+          Discovered programming through curiosity and became fascinated by solving problems through code. Learning the absolute basics of logic.
         </p>
+        <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Learned</h4>
+        <div class="pill-group"><span class="pill">C</span><span class="pill">Python</span><span class="pill">Logic Building</span></div>
       </div>
-    </div>
-  </section>
 
-  <!-- SECTION 7 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">Freelancing Journey</h2>
-      <p class="text-body" style="font-size: 1.15rem; margin-bottom: 3rem; max-width: 800px;">Transitioning from learning and building personal projects to delivering high-impact solutions that solve real-world business problems.</p>
-      
-      <div class="bento-grid">
-        <div class="glow-card" style="text-align: center;">
-            <h3 class="heading-card" style="color: var(--accent-primary);">AI Solutions</h3>
-        </div>
-        <div class="glow-card" style="text-align: center;">
-            <h3 class="heading-card" style="color: var(--accent-primary);">Full Stack Applications</h3>
-        </div>
-        <div class="glow-card" style="text-align: center;">
-            <h3 class="heading-card" style="color: var(--accent-primary);">Automation Workflows</h3>
-        </div>
-        <div class="glow-card" style="text-align: center;">
-            <h3 class="heading-card" style="color: var(--accent-primary);">MVP Development</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 8 -->
-  <section class="story-section">
-    <div class="container reveal-up">
-      <h2 class="section-title">What I'm Building Next</h2>
-      <div class="pill-group" style="justify-content: flex-start; gap: 1rem; flex-wrap: wrap;">
-        <span class="pill" style="font-size: 1.2rem; padding: 1rem 2rem; border-color: rgba(255,255,255,0.2);">AI SaaS Products</span>
-        <span class="pill" style="font-size: 1.2rem; padding: 1rem 2rem; border-color: rgba(255,255,255,0.2);">Cloud Computing</span>
-        <span class="pill" style="font-size: 1.2rem; padding: 1rem 2rem; border-color: rgba(255,255,255,0.2);">System Design</span>
-        <span class="pill" style="font-size: 1.2rem; padding: 1rem 2rem; border-color: rgba(255,255,255,0.2);">Freelance Business</span>
-        <span class="pill" style="font-size: 1.2rem; padding: 1rem 2rem; border-color: rgba(255,255,255,0.2);">Startup Ideas</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL SECTION -->
-  <section class="story-section" style="padding-bottom: 8rem;">
-    <div class="container reveal-up">
-      <div class="glow-card" style="text-align: center; padding: 6rem 2rem; border: 2px solid var(--accent-primary); background: rgba(245, 158, 11, 0.05);">
-        <h2 class="heading-massive" style="font-size: clamp(3rem, 6vw, 6rem); margin-bottom: 2rem;">The Long-Term Vision</h2>
-        <p class="text-body" style="font-size: 1.5rem; color: white; max-width: 800px; margin: 0 auto 1.5rem;">
-            I want to build AI-powered products that solve real-world problems at scale.
+      <!-- Chapter 2 -->
+      <div class="glass-card reveal-up" style="margin-bottom: 2rem; padding: 3rem;">
+        <h4 style="font-family: var(--font-mono); color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">Chapter 2</h4>
+        <h2 class="heading-section" style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display); text-transform: none;">Developer (Building Real Things)</h2>
+        <p class="text-body" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+          Moved past simple scripts to build full-stack applications. Mastered the core building blocks required to write highly efficient, optimized code for complex software.
         </p>
-        <p class="text-body" style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">
-            My goal is not just to write code but to create technology, businesses, and systems that deliver meaningful impact.
-        </p>
+        <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Learned</h4>
+        <div class="pill-group"><span class="pill">Web Dev</span><span class="pill">DSA</span><span class="pill">Databases</span></div>
       </div>
+
+      <!-- Chapter 3 -->
+      <div class="glass-card reveal-up" style="margin-bottom: 2rem; padding: 3rem;">
+        <h4 style="font-family: var(--font-mono); color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">Chapter 3</h4>
+        <h2 class="heading-section" style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display); text-transform: none;">AI Builder (The AI Era)</h2>
+        <p class="text-body" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+          Realized the potential of Large Language Models. Started building conversational AI systems, RAG applications, and intelligent automation platforms.
+        </p>
+        <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Learned</h4>
+        <div class="pill-group"><span class="pill">AI Integration</span><span class="pill">Prompt Engineering</span></div>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div class="glass-card reveal-up" style="margin-bottom: 2rem; padding: 3rem;">
+        <h4 style="font-family: var(--font-mono); color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">Chapter 4</h4>
+        <h2 class="heading-section" style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display); text-transform: none;">Freelancer (Independent Builder)</h2>
+        <p class="text-body" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+          Taking my engineering skills to the market. Working directly with clients, scoping requirements, and delivering end-to-end production software.
+        </p>
+        <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Learned</h4>
+        <div class="pill-group"><span class="pill">Client Comms</span><span class="pill">Scoping</span><span class="pill">Delivery</span></div>
+      </div>
+
+      <!-- Chapter 5 -->
+      <div class="glass-card reveal-up" style="margin-bottom: 2rem; padding: 3rem;">
+        <h4 style="font-family: var(--font-mono); color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">Chapter 5</h4>
+        <h2 class="heading-section" style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display); text-transform: none;">Future Founder (The Next Chapter)</h2>
+        <p class="text-body" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+          Transitioning from just writing code to building products that scale. Focusing on entrepreneurship, value creation, and solving large-scale problems.
+        </p>
+        <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Focusing On</h4>
+        <div class="pill-group"><span class="pill">Product Thinking</span><span class="pill">Scaling</span><span class="pill">Entrepreneurship</span></div>
+      </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer-premium">
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-premium" style="border-top: 1px solid var(--border-subtle); padding: 4rem 0; margin-top: 4rem;">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="heading-card">Shubham Singh</h3>
-          <p class="text-body" style="font-size: 0.9rem;">Building intelligent applications for the modern web.</p>
+      <div class="bento-grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Shubham Singh</h3>
+          <p class="text-body" style="font-size: 0.95rem;">Building AI-powered products and intelligent systems.</p>
         </div>
-        <div class="footer-links">
-          <h4 class="label-mono" style="margin-bottom: 1rem;">Connect</h4>
-          <a href="https://github.com/Shubham-singh1712">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="mailto:shubham@example.com">Email</a>
+        <div style="display: flex; gap: 2rem;">
+          <a href="https://github.com/Shubham-singh1712" class="text-body" style="text-decoration: none; transition: color 0.3s;">GitHub</a>
+          <a href="https://www.linkedin.com/in/shubhamsingh1712" class="text-body" style="text-decoration: none; transition: color 0.3s;">LinkedIn</a>
+          <a href="mailto:shubham@example.com" class="text-body" style="text-decoration: none; transition: color 0.3s;">Email</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Shubham Singh. All rights reserved.</p>
-      </div>
+      <p class="text-body" style="font-size: 0.85rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">&copy; 2026 Shubham Singh. All rights reserved.</p>
     </div>
   </footer>
 

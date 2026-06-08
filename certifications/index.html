@@ -8,64 +8,81 @@
 </head>
 <body>
 
-  <!-- SINGLE NAVIGATION -->
+  <!-- GLOBAL NAVIGATION -->
   <nav class="nav-premium">
     <div class="container">
       <a href="../index.html" class="nav-logo">Shubham Singh</a>
       <div class="nav-links">
+        <a href="../index.html" style="">Home</a>
         <a href="../index.html#about">About</a>
-        <a href="../projects/index.html">Projects</a>
-        <a href="../journey/index.html">Journey</a>
+        <a href="../projects/index.html" style="">Projects</a>
+        <a href="../journey/index.html" style="">Journey</a>
         <a href="../certifications/index.html" style="color: var(--accent-primary);">Certifications</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="section-premium" style="min-height: 40vh; display: flex; align-items: center; padding-top: 120px;">
+  <section class="section-premium" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: var(--nav-height);">
     <div class="container reveal-up">
-      <div class="label-mono">// 04 — Credentials</div>
       <h1 class="heading-massive" style="font-size: clamp(3rem, 8vw, 8rem);">Certifications</h1>
-      <p class="text-body">Continuous learning and professional accreditations.</p>
+      <p class="text-body" style="margin: 2rem auto; max-width: 700px; font-size: 1.25rem;">
+        Official recognition of technical skills and continuous learning.
+      </p>
     </div>
   </section>
 
   <section class="section-premium" style="padding-top: 0;">
     <div class="container">
-      <div class="cert-grid">
+      
+      <div class="bento-grid">
         
         <div class="glass-card reveal-up">
-          <div class="pill-group"><span class="pill accent">2024</span></div>
-          <h3 class="heading-card" style="font-size: 1.5rem;">Microsoft AI Skills Fest</h3>
-          <p class="text-body" style="font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1.5rem;">Issued by Microsoft</p>
-          <a href="#" class="btn btn-secondary" style="width: 100%;">View Credential</a>
+          <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">AWS</span></div>
+          <h2 class="heading-section" style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display);">AWS Certified Cloud Practitioner</h2>
+          <p class="text-body" style="margin-bottom: 2rem;">Foundational understanding of AWS Cloud concepts, security, and architecture.</p>
+          <div style="flex-grow: 1;"></div>
+          <a href="#" class="btn" style="background: transparent; color: white; border: 1px solid var(--border-strong); border-radius: 8px; padding: 0.75rem 1.5rem; text-align: center;">View Credential</a>
         </div>
 
         <div class="glass-card reveal-up">
-          <div class="pill-group"><span class="pill accent">2024</span></div>
-          <h3 class="heading-card" style="font-size: 1.5rem;">Deloitte Data Analytics</h3>
-          <p class="text-body" style="font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1.5rem;">Issued by Deloitte</p>
-          <a href="#" class="btn btn-secondary" style="width: 100%;">View Credential</a>
+          <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">HackerRank</span></div>
+          <h2 class="heading-section" style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display);">Problem Solving (Basic)</h2>
+          <p class="text-body" style="margin-bottom: 2rem;">Demonstrated ability to solve algorithmic challenges using optimal data structures.</p>
+          <div style="flex-grow: 1;"></div>
+          <a href="#" class="btn" style="background: transparent; color: white; border: 1px solid var(--border-strong); border-radius: 8px; padding: 0.75rem 1.5rem; text-align: center;">View Credential</a>
         </div>
 
         <div class="glass-card reveal-up">
-          <div class="pill-group"><span class="pill accent">In Progress</span></div>
-          <h3 class="heading-card" style="font-size: 1.5rem;">AWS Cloud Practitioner</h3>
-          <p class="text-body" style="font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1.5rem;">Issued by Amazon Web Services</p>
-          <a href="#" class="btn btn-secondary" style="width: 100%; opacity: 0.5; cursor: not-allowed;">Pending</a>
+          <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">freeCodeCamp</span></div>
+          <h2 class="heading-section" style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem; color: white; font-family: var(--font-display);">Responsive Web Design</h2>
+          <p class="text-body" style="margin-bottom: 2rem;">Mastery of modern HTML, CSS, Flexbox, Grid, and responsive accessibility.</p>
+          <div style="flex-grow: 1;"></div>
+          <a href="#" class="btn" style="background: transparent; color: white; border: 1px solid var(--border-strong); border-radius: 8px; padding: 0.75rem 1.5rem; text-align: center;">View Credential</a>
         </div>
 
       </div>
+
     </div>
   </section>
 
-<script>
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('is-visible'); obs.unobserve(entry.target); }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
-</script>
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-premium" style="border-top: 1px solid var(--border-subtle); padding: 4rem 0; margin-top: 4rem;">
+    <div class="container">
+      <div class="bento-grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Shubham Singh</h3>
+          <p class="text-body" style="font-size: 0.95rem;">Building AI-powered products and intelligent systems.</p>
+        </div>
+        <div style="display: flex; gap: 2rem;">
+          <a href="https://github.com/Shubham-singh1712" class="text-body" style="text-decoration: none; transition: color 0.3s;">GitHub</a>
+          <a href="https://www.linkedin.com/in/shubhamsingh1712" class="text-body" style="text-decoration: none; transition: color 0.3s;">LinkedIn</a>
+          <a href="mailto:shubham@example.com" class="text-body" style="text-decoration: none; transition: color 0.3s;">Email</a>
+        </div>
+      </div>
+      <p class="text-body" style="font-size: 0.85rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">&copy; 2026 Shubham Singh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>

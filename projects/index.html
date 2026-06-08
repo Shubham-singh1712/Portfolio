@@ -6,98 +6,28 @@
   <title>Projects | Shubham Singh</title>
   <link rel="stylesheet" href="../styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <style>
-    .showcase-block {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      margin-bottom: 8rem;
-    }
-    .showcase-block.reverse {
-      grid-template-columns: 1fr 1fr;
-    }
-    .showcase-block.reverse .content {
-      order: 2;
-    }
-    .showcase-block.reverse .visual {
-      order: 1;
-    }
-    @media (max-width: 992px) {
-      .showcase-block, .showcase-block.reverse {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .showcase-block.reverse .content {
-        order: 1;
-      }
-      .showcase-block.reverse .visual {
-        order: 2;
-      }
-    }
-    .visual-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: rgba(18, 18, 20, 0.4);
-      border: 1px solid var(--border-strong);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .visual-placeholder::before {
-      content: '';
-      position: absolute;
-      top: -50%; left: -50%; width: 200%; height: 200%;
-      background: radial-gradient(circle, var(--accent-primary-glow) 0%, transparent 50%);
-      opacity: 0.1;
-      pointer-events: none;
-    }
-    .feature-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 2rem 0;
-    }
-    .feature-list li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--text-muted);
-    }
-    .feature-list li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--accent-primary);
-    }
-  </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- GLOBAL NAVIGATION -->
   <nav class="nav-premium">
     <div class="container">
       <a href="../index.html" class="nav-logo">Shubham Singh</a>
       <div class="nav-links">
+        <a href="../index.html">Home</a>
         <a href="../index.html#about">About</a>
-        <a href="../projects/index.html" style="color: var(--accent-primary);">Projects</a>
+        <a href="index.html" style="color: var(--accent-primary);">Projects</a>
         <a href="../journey/index.html">Journey</a>
         <a href="../certifications/index.html">Certifications</a>
       </div>
-      <button class="menu-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="section-premium" style="min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: var(--nav-height); position: relative; overflow: hidden;">
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60vw; height: 60vw; background: radial-gradient(circle, var(--accent-primary) 0%, transparent 60%); opacity: 0.05; pointer-events: none;"></div>
-    <div class="container reveal-up">
-      <h1 class="heading-massive" style="font-size: clamp(4rem, 10vw, 10rem);">Projects</h1>
-      <p class="text-body" style="margin: 2rem auto; max-width: 700px; font-size: 1.25rem;">
+  <!-- HERO SECTION -->
+  <section class="section-premium" style="padding-top: calc(var(--nav-height) + 4rem); padding-bottom: 2rem;">
+    <div class="container text-center reveal-up">
+      <h1 class="heading-massive" style="font-size: clamp(3rem, 8vw, 8rem); margin-bottom: 1rem;">Projects</h1>
+      <p class="text-body" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">
         A collection of products, experiments, and AI systems built to solve practical problems.
       </p>
     </div>
@@ -108,234 +38,97 @@
     <div class="container">
       
       <!-- AutoSpend AI -->
-      <div class="showcase-block reveal-up">
-        <div class="content">
-          <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">FinTech SaaS</span></div>
-          <h2 class="heading-massive" style="font-size: clamp(2.5rem, 5vw, 4rem); text-transform: none; letter-spacing: -0.02em; margin-bottom: 1.5rem;">AutoSpend AI</h2>
-          <h3 style="font-family: 'Inter', sans-serif; font-size: 1.25rem; color: white; margin-bottom: 2rem; font-weight: 500;">Automating Personal Expense Management</h3>
+      <div class="project-showcase reveal-up">
+        <div class="showcase-content">
+          <div class="pill-group"><span class="pill accent">FinTech SaaS</span></div>
+          <h3 class="heading-section" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; text-transform:none;">AutoSpend AI</h3>
+          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: var(--accent-primary); margin-bottom: 1.5rem; font-weight: 500;">Automating Personal Expense Management</h4>
           
-          <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">The Problem</h4>
-            <p class="text-body">Expense tracking is manual, inconsistent, and difficult to maintain.</p>
-          </div>
+          <p class="text-body" style="margin-bottom: 1rem;"><strong>Problem:</strong> Expense tracking is manual, inconsistent, and difficult to maintain.</p>
+          <p class="text-body" style="margin-bottom: 2rem;"><strong>Solution:</strong> An AI-powered platform that extracts transactions from receipts, screenshots, and text inputs. Features smart categorization, analytics dashboards, and expense insights.</p>
           
-          <div style="margin-bottom: 2rem;">
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">The Solution</h4>
-            <p class="text-body">An AI-powered platform that extracts transactions from receipts, screenshots, and text entries.</p>
+          <div class="pill-group" style="margin-bottom: var(--space-md);">
+            <span class="pill">React</span><span class="pill">FastAPI</span><span class="pill">PostgreSQL</span><span class="pill">AI OCR</span>
           </div>
-
-          <div class="bento-grid-2" style="margin-bottom: 2rem; gap: 1rem;">
-            <div class="glow-card" style="padding: 1.5rem;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 1rem; text-transform: uppercase;">Key Features</h4>
-                <ul class="feature-list" style="margin-bottom: 0;">
-                    <li>AI Extraction</li>
-                    <li>OCR Processing</li>
-                    <li>Review Workflow</li>
-                    <li>Analytics Dashboard</li>
-                    <li>Expense Insights</li>
-                </ul>
-            </div>
-            <div class="glow-card" style="padding: 1.5rem;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 1rem; text-transform: uppercase;">Future Roadmap</h4>
-                <ul class="feature-list" style="margin-bottom: 0;">
-                    <li>Google Drive Integration</li>
-                    <li>Smart Categorization</li>
-                    <li>AI Finance Assistant</li>
-                    <li>Architecture Overview</li>
-                </ul>
-            </div>
-          </div>
-
-          <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Tech Stack</h4>
-          <div class="pill-group" style="margin-bottom: 2rem;">
-            <span class="pill">React</span><span class="pill">FastAPI</span><span class="pill">PostgreSQL</span><span class="pill">OCR</span><span class="pill">AI</span>
-          </div>
-          
           <div class="btn-group">
-            <a href="autospend-ai/index.html" class="btn" style="background: var(--accent-primary); color: #000; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600;">View Product</a>
+            <a href="autospend-ai/index.html" class="btn btn-primary">View Case Study</a>
+            <a href="https://github.com/Shubham-singh1712/AutoSpend-AI" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
-        <div class="visual">
-          <div class="visual-placeholder">
-            <span style="font-family: var(--font-mono); color: var(--text-muted);">[ AutoSpend AI Dashboard Mockup ]</span>
-          </div>
+        <div class="showcase-visual">
+          <img src="autospend-ai/mockup.jpg" alt="Auto Spend AI Interface" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000';" />
         </div>
       </div>
 
       <!-- INSUREFLOW AI -->
-      <div class="showcase-block reverse reveal-up">
-        <div class="content">
-          <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">InsurTech SaaS</span></div>
-          <h2 class="heading-massive" style="font-size: clamp(2.5rem, 5vw, 4rem); text-transform: none; letter-spacing: -0.02em; margin-bottom: 1.5rem;">INSUREFLOW AI</h2>
-          <h3 style="font-family: 'Inter', sans-serif; font-size: 1.25rem; color: white; margin-bottom: 2rem; font-weight: 500;">AI-Powered Insurance Claims Automation</h3>
+      <div class="project-showcase reverse reveal-up" style="margin-top: var(--space-xl);">
+        <div class="showcase-content">
+          <div class="pill-group"><span class="pill accent">InsurTech SaaS</span></div>
+          <h3 class="heading-section" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; text-transform:none;">INSUREFLOW AI</h3>
+          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: var(--accent-primary); margin-bottom: 1.5rem; font-weight: 500;">AI-Powered Claims Automation</h4>
           
-          <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">The Problem</h4>
-            <p class="text-body">Insurance claim processing is slow, document-heavy, and error-prone.</p>
-          </div>
+          <p class="text-body" style="margin-bottom: 1rem;"><strong>Problem:</strong> Insurance claim processing is slow, document-heavy, and error-prone.</p>
+          <p class="text-body" style="margin-bottom: 2rem;"><strong>Solution:</strong> An intelligent platform that automates claim validation and review workflows using advanced LLMs and context retrieval.</p>
           
-          <div style="margin-bottom: 2rem;">
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">The Solution</h4>
-            <p class="text-body">An intelligent platform that automates claim validation and review workflows.</p>
-          </div>
-
-          <div class="bento-grid-2" style="margin-bottom: 2rem; gap: 1rem;">
-            <div class="glow-card" style="padding: 1.5rem;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 1rem; text-transform: uppercase;">Features</h4>
-                <ul class="feature-list" style="margin-bottom: 0;">
-                    <li>Document Processing</li>
-                    <li>OCR</li>
-                    <li>AI Validation</li>
-                    <li>Review Queue</li>
-                    <li>Fraud Detection Logic</li>
-                </ul>
-            </div>
-            <div class="glow-card" style="padding: 1.5rem;">
-                <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 1rem; text-transform: uppercase;">Future Vision</h4>
-                <ul class="feature-list" style="margin-bottom: 0;">
-                    <li>Agentic Claims Review</li>
-                    <li>Healthcare Workflow Automation</li>
-                    <li>Architecture Section</li>
-                </ul>
-            </div>
-          </div>
-
-          <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Tech Stack</h4>
-          <div class="pill-group" style="margin-bottom: 2rem;">
+          <div class="pill-group" style="margin-bottom: var(--space-md);">
             <span class="pill">Next.js</span><span class="pill">LangChain</span><span class="pill">Vector DB</span><span class="pill">Python</span>
           </div>
-          
           <div class="btn-group">
-            <a href="#" class="btn" style="background: var(--accent-primary); color: #000; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600;">View Product</a>
+            <a href="insureflow-ai/index.html" class="btn btn-primary">View Case Study</a>
+            <a href="https://github.com/Shubham-singh1712/InsureFlow-AI" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
-        <div class="visual">
-          <div class="visual-placeholder">
-            <span style="font-family: var(--font-mono); color: var(--text-muted);">[ INSUREFLOW AI Pipeline Mockup ]</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- AI CHATBOT -->
-      <div class="showcase-block reveal-up">
-        <div class="content">
-          <div class="pill-group" style="margin-bottom: 1rem;"><span class="pill accent">AI Tooling</span></div>
-          <h2 class="heading-massive" style="font-size: clamp(2.5rem, 5vw, 4rem); text-transform: none; letter-spacing: -0.02em; margin-bottom: 1.5rem;">AI Chatbot</h2>
-          <h3 style="font-family: 'Inter', sans-serif; font-size: 1.25rem; color: white; margin-bottom: 2rem; font-weight: 500;">Conversational AI Assistant</h3>
-          
-          <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">The Problem</h4>
-            <p class="text-body">Users need fast access to information through natural conversation.</p>
-          </div>
-          
-          <div style="margin-bottom: 2rem;">
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">The Solution</h4>
-            <p class="text-body">An AI-powered chatbot capable of contextual conversations and intelligent responses.</p>
-          </div>
-
-          <div class="glow-card" style="padding: 1.5rem; margin-bottom: 2rem;">
-            <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 1rem; text-transform: uppercase;">Features</h4>
-            <ul class="feature-list" style="margin-bottom: 0; display: grid; grid-template-columns: 1fr 1fr;">
-                <li>Context Handling</li>
-                <li>Prompt Engineering</li>
-                <li>API Integration</li>
-                <li>Conversation Management</li>
-            </ul>
-          </div>
-
-          <h4 style="font-family: var(--font-mono); color: white; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">Tech Stack</h4>
-          <div class="pill-group" style="margin-bottom: 2rem;">
-            <span class="pill">React</span><span class="pill">Node.js</span><span class="pill">OpenAI API</span>
-          </div>
-          
-          <div class="btn-group">
-            <a href="#" class="btn" style="background: var(--accent-primary); color: #000; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600;">View Product</a>
-          </div>
-        </div>
-        <div class="visual">
-          <div class="visual-placeholder">
-            <span style="font-family: var(--font-mono); color: var(--text-muted);">[ AI Chatbot Interface Mockup ]</span>
-          </div>
+        <div class="showcase-visual">
+          <img src="insureflow-ai/mockup.jpg" alt="InsureFlow AI Interface" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000';" />
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- PROJECT PHILOSOPHY -->
-  <section class="section-premium reveal-up" style="border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 4rem;">
-        <h2 class="heading-massive" style="font-size: clamp(2.5rem, 5vw, 4rem); text-transform: none; letter-spacing: -0.02em;">How I Build</h2>
-      </div>
-      
-      <div class="bento-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center;">
-        <div class="glow-card" style="padding: 2rem 1rem;">
-            <div style="font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 1rem;">01</div>
-            <h4 style="color: white; font-family: 'Inter', sans-serif;">Understand the problem</h4>
-        </div>
-        <div class="glow-card" style="padding: 2rem 1rem;">
-            <div style="font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 1rem;">02</div>
-            <h4 style="color: white; font-family: 'Inter', sans-serif;">Design the workflow</h4>
-        </div>
-        <div class="glow-card" style="padding: 2rem 1rem;">
-            <div style="font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 1rem;">03</div>
-            <h4 style="color: white; font-family: 'Inter', sans-serif;">Build the MVP</h4>
-        </div>
-        <div class="glow-card" style="padding: 2rem 1rem;">
-            <div style="font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 1rem;">04</div>
-            <h4 style="color: white; font-family: 'Inter', sans-serif;">Gather feedback</h4>
-        </div>
-        <div class="glow-card" style="padding: 2rem 1rem;">
-            <div style="font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 1rem;">05</div>
-            <h4 style="color: white; font-family: 'Inter', sans-serif;">Iterate continuously</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES CTA -->
-  <section class="section-premium reveal-up">
-    <div class="container">
-      <div class="glow-card" style="text-align: center; padding: 6rem 2rem; border-color: var(--accent-primary);">
-        <h2 class="heading-massive" style="font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1rem;">Need Something Similar?</h2>
-        <p class="text-body" style="font-size: 1.25rem; margin-bottom: 3rem;">I build scalable, intelligent products for the real world.</p>
+  <!-- EXPERIMENTS & TOOLS -->
+  <section class="section-premium" style="padding-top: var(--space-lg); border-top: 1px solid var(--border-subtle);">
+    <div class="container reveal-up">
+      <h2 class="heading-section" style="margin-bottom: var(--space-lg); text-align: center;">Experiments & Tools</h2>
+      <div class="bento-grid">
         
-        <div class="pill-group" style="justify-content: center; gap: 1rem; margin-bottom: 4rem;">
-            <span class="pill" style="font-size: 1.1rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: none; color: white;">AI Applications</span>
-            <span class="pill" style="font-size: 1.1rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: none; color: white;">Full Stack Products</span>
-            <span class="pill" style="font-size: 1.1rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: none; color: white;">Automation Systems</span>
-            <span class="pill" style="font-size: 1.1rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: none; color: white;">MVPs</span>
-            <span class="pill" style="font-size: 1.1rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: none; color: white;">Custom Dashboards</span>
+        <div class="glass-card">
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: white; margin-bottom: 0.5rem;">AI Chatbot System</h3>
+          <p class="text-body" style="margin-bottom: 1.5rem;">Advanced conversational AI assistant capable of maintaining context across sessions and executing external API calls.</p>
+          <div class="pill-group" style="margin-bottom: 1.5rem;">
+            <span class="pill">React</span><span class="pill">OpenAI</span>
+          </div>
+          <a href="ai-chatbot/index.html" class="btn btn-secondary" style="width: 100%; text-align: center;">View Project</a>
         </div>
 
-        <div class="btn-group" style="justify-content: center; gap: 1.5rem;">
-          <a href="../index.html#contact" class="btn" style="background: var(--accent-primary); color: #000; border: none; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">Let's Work Together</a>
-          <a href="../Shubham_singh_Resume.pdf" target="_blank" class="btn" style="background: transparent; color: white; border: 1px solid var(--border-strong); padding: 1rem 2.5rem; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">View Resume</a>
-          <a href="mailto:shubham@example.com" class="btn" style="background: transparent; color: white; border: 1px solid var(--border-strong); padding: 1rem 2.5rem; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">Contact Me</a>
+        <div class="glass-card">
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: white; margin-bottom: 0.5rem;">Portfolio V2</h3>
+          <p class="text-body" style="margin-bottom: 1.5rem;">The current iteration of my portfolio, featuring a bespoke design system, Three.js integrations, and fluid animations.</p>
+          <div class="pill-group" style="margin-bottom: 1.5rem;">
+            <span class="pill">HTML/CSS</span><span class="pill">Three.js</span>
+          </div>
+          <a href="https://github.com/Shubham-singh1712" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">GitHub</a>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer-premium">
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-premium" style="border-top: 1px solid var(--border-subtle); padding: 4rem 0; margin-top: 4rem;">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="heading-card">Shubham Singh</h3>
-          <p class="text-body" style="font-size: 0.9rem;">Building intelligent applications for the modern web.</p>
+      <div class="bento-grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Shubham Singh</h3>
+          <p class="text-body" style="font-size: 0.95rem;">Building AI-powered products and intelligent systems.</p>
         </div>
-        <div class="footer-links">
-          <h4 class="label-mono" style="margin-bottom: 1rem;">Connect</h4>
-          <a href="https://github.com/Shubham-singh1712">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="mailto:shubham@example.com">Email</a>
+        <div style="display: flex; gap: 2rem;">
+          <a href="https://github.com/Shubham-singh1712" class="text-body" style="text-decoration: none; transition: color 0.3s;">GitHub</a>
+          <a href="https://www.linkedin.com/in/shubhamsingh1712" class="text-body" style="text-decoration: none; transition: color 0.3s;">LinkedIn</a>
+          <a href="mailto:shubham@example.com" class="text-body" style="text-decoration: none; transition: color 0.3s;">Email</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Shubham Singh. All rights reserved.</p>
-      </div>
+      <p class="text-body" style="font-size: 0.85rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">&copy; 2026 Shubham Singh. All rights reserved.</p>
     </div>
   </footer>
 
