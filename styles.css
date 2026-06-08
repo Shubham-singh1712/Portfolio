@@ -630,7 +630,7 @@ ul, ol { list-style: none; }
   position: absolute;
   opacity: 0;
   transform: translateY(20px);
-  animation: rotateText 12s infinite;
+  animation: rotateText 15s infinite;
   font-family: var(--font-display);
   font-size: clamp(40px, 6vw, 100px); /* Mobile: 40px, Tablet: 60px, Desktop: 100px */
   font-weight: 700;
@@ -642,6 +642,7 @@ ul, ol { list-style: none; }
 .rotating-text:nth-child(2) { animation-delay: 3s; }
 .rotating-text:nth-child(3) { animation-delay: 6s; }
 .rotating-text:nth-child(4) { animation-delay: 9s; }
+.rotating-text:nth-child(5) { animation-delay: 12s; }
 
 @keyframes rotateText {
   0% { opacity: 0; transform: translateY(20px); }
@@ -737,13 +738,33 @@ ul, ol { list-style: none; }
 }
 
 
+
 /* ==========================================================================
    MOBILE RESPONSIVENESS OVERHAUL
    ========================================================================== */
 
+/* GLOBAL NO-OVERFLOW */
+html, body {
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+}
+
 /* Default Desktop specific classes */
 .hero-section-main {
   min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* MOBILE NAV LINKS VERTICAL STACK */
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -753,6 +774,7 @@ ul, ol { list-style: none; }
     min-height: auto;
     padding-top: calc(var(--nav-height) + 2rem) !important;
     padding-bottom: 2rem !important;
+    text-align: center;
   }
   
   /* Avatar */
@@ -768,15 +790,31 @@ ul, ol { list-style: none; }
 
   /* Typography Scale */
   .hero-name {
-    font-size: clamp(3rem, 12vw, 3.75rem) !important;
-    line-height: 1.05 !important;
+    font-size: clamp(2.5rem, 12vw, 3.5rem) !important;
+    line-height: 1 !important;
     letter-spacing: -0.02em !important;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   .hero-name span {
     display: block;
     margin: 0;
+    width: 100%;
   }
   
+  
+  /* Rotating Text Mobile Fix */
+  .rotating-text-container {
+    height: 80px !important;
+  }
+  .rotating-text {
+    font-size: clamp(24px, 6vw, 32px) !important;
+    white-space: normal !important;
+  }
+
   /* Text Toggling */
   .desktop-description {
     display: none !important;
@@ -787,6 +825,8 @@ ul, ol { list-style: none; }
     line-height: 1.6 !important;
     margin: 1.5rem auto !important;
     padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Button Stacking */
@@ -795,19 +835,14 @@ ul, ol { list-style: none; }
     gap: 12px !important;
     width: 100% !important;
     padding: 0 1.5rem;
+    box-sizing: border-box;
   }
   .hero-section-main .btn {
     width: 100% !important;
   }
-  .btn-view {
-    order: 1;
-  }
-  .btn-res {
-    order: 2;
-  }
-  .btn-touch {
-    order: 3;
-  }
+  .btn-view { order: 1; }
+  .btn-res { order: 2; }
+  .btn-touch { order: 3; }
 
   /* Stats Section (Metrics) */
   .metrics-grid {
@@ -828,15 +863,43 @@ ul, ol { list-style: none; }
   /* Responsive General Spacing */
   .section-premium {
     padding: 4rem 1rem !important;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   
   .glass-card {
     padding: 1.5rem !important;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* Project Tags Wrap */
+  .pill-group {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Footer Stack */
+  .footer-premium .bento-grid-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  
+  /* Fix Mobile Nav Menu links overriding */
+  .mobile-menu-overlay a {
+    font-size: 1.75rem !important;
   }
 }
 
 @media (max-width: 640px) {
   .heading-massive {
-    font-size: clamp(2.5rem, 8vw, 3rem) !important;
+    font-size: clamp(2.2rem, 8vw, 2.8rem) !important;
+    word-break: break-word;
+    width: 100%;
+  }
+  .heading-section {
+    font-size: clamp(2rem, 8vw, 2.5rem) !important;
   }
 }
