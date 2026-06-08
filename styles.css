@@ -735,3 +735,108 @@ ul, ol { list-style: none; }
 .btn {
   will-change: transform;
 }
+
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS OVERHAUL
+   ========================================================================== */
+
+/* Default Desktop specific classes */
+.hero-section-main {
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  
+  /* Hero Constraints */
+  .hero-section-main {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + 2rem) !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  /* Avatar */
+  .avatar-wrapper {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto 1rem auto !important;
+  }
+  .avatar-wrapper img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Typography Scale */
+  .hero-name {
+    font-size: clamp(3rem, 12vw, 3.75rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.02em !important;
+  }
+  .hero-name span {
+    display: block;
+    margin: 0;
+  }
+  
+  /* Text Toggling */
+  .desktop-description {
+    display: none !important;
+  }
+  .mobile-description {
+    display: block !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin: 1.5rem auto !important;
+    padding: 0 1rem;
+  }
+
+  /* Button Stacking */
+  .hero-section-main .btn-group {
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    padding: 0 1.5rem;
+  }
+  .hero-section-main .btn {
+    width: 100% !important;
+  }
+  .btn-view {
+    order: 1;
+  }
+  .btn-res {
+    order: 2;
+  }
+  .btn-touch {
+    order: 3;
+  }
+
+  /* Stats Section (Metrics) */
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  .metric-box {
+    padding: 1.25rem 1rem !important;
+    min-height: auto !important;
+  }
+  .metric-num {
+    font-size: clamp(2rem, 8vw, 2.5rem) !important;
+  }
+  .metric-label {
+    font-size: 0.8rem !important;
+  }
+
+  /* Responsive General Spacing */
+  .section-premium {
+    padding: 4rem 1rem !important;
+  }
+  
+  .glass-card {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .heading-massive {
+    font-size: clamp(2.5rem, 8vw, 3rem) !important;
+  }
+}
