@@ -143,6 +143,9 @@ ul, ol { list-style: none; }
   font-size: clamp(3.5rem, 10vw, 7rem);
   line-height: 0.9;
   letter-spacing: -0.04em;
+  text-align: left;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .hero-name span {
