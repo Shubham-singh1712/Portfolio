@@ -22,6 +22,8 @@
 </head>
 
 <body>
+<div id="portfolio" class="visible">
+<div class="bg-grid"></div>
 
   <!-- Skip Link -->
   <a href="/#main" class="sr-only">Skip to content</a>
@@ -29,53 +31,20 @@
   <!-- ============================
      NAVIGATION
 ============================ -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <div class="nav__inner">
-        <a href="/" class="nav__logo" aria-label="Shubham Singh home">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            aria-hidden="true">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-            <path d="M2 17l10 5 10-5" />
-            <path d="M2 12l10 5 10-5" />
-          </svg>
-          Shubham Singh
-        </a>
+  
+  <!-- NAV -->
+  <nav id="main-nav">
+    <a href="../index.html" class="nav-logo">S<span>.</span>Singh</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../projects/index.html">Projects</a></li>
+      <li><a href="../journey/index.html">Journey</a></li>
+      <li><a href="../index.html#contact-section">Contact</a></li>
+    </ul>
+    <a href="../Shubham_singh_Resume.pdf" class="nav-cta" target="_blank">Resume ↗</a>
+  </nav>
 
-        <div class="nav__links" role="list">
-          <a href="../journey/index.html" role="listitem">Journey</a>
-          <a href="../index.html#about" role="listitem">About</a>
-          <a href="../projects/index.html" role="listitem">Projects</a>
-          <a href="../index.html#skills" role="listitem">Skills</a>
-          <a href="/#writing" role="listitem">Writing</a>
-          <a href="../index.html#contact" role="listitem">Contact</a>
-        </div>
-
-        <div class="nav__actions">
-          <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          </button>
-          <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="../journey/index.html" onclick="closeMobileMenu()">Journey</a>
-      <a href="../index.html#about" onclick="closeMobileMenu()">About</a>
-      <a href="../projects/index.html" onclick="closeMobileMenu()">Projects</a>
-      <a href="../index.html#skills" onclick="closeMobileMenu()">Skills</a>
-      <a href="/#writing" onclick="closeMobileMenu()">Writing</a>
-      <a href="../index.html#contact" onclick="closeMobileMenu()">Contact</a>
-    </nav>
   </nav>
 
   <!-- ============================
@@ -343,18 +312,13 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__inner">
-        <p class="footer__copy">© 2026 Shubham Singh · Built with care</p>
-        <div class="footer__links" role="list">
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" role="listitem">GitHub</a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" role="listitem">LinkedIn</a>
-          <a href="mailto:shubham@example.com" role="listitem">Email</a>
-        </div>
-      </div>
-    </div>
+  
+  <footer style="margin-top: 4rem;">
+    <span>© 2026 <span class="accent">Shubham Singh</span></span>
+    <span>Built with HTML, CSS, JS <span class="accent">&</span> Passion</span>
+    <span>KIIT BBSR · B.Tech CSE</span>
   </footer>
+
 
   <!-- Back to top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -568,6 +532,7 @@
       .catch(err => console.log('GitHub fetch error:', err));
 
 </script>
+</div>
 </body>
 
 </html>
