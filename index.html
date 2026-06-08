@@ -56,9 +56,9 @@
   <div id="entry-screen">
     <canvas id="three-canvas"></canvas>
     <div class="entry-instruction">Click Avatar to Enter</div>
-    <div id="speech-bubble" style="position:fixed; z-index:1001; background:var(--surface-color); border:1px solid var(--border-color); color:var(--text-color); padding:0.75rem 1rem; border-radius:8px; font-family:'DM Mono', monospace; font-size:0.85rem; opacity:0; pointer-events:none; transition:opacity 0.3s; box-shadow:0 8px 32px rgba(0,0,0,0.5); transform:translate(-50%, -100%);">
+    <div id="speech-bubble" style="position:fixed; z-index:1001; background:var(--color-surface); border:1px solid var(--color-border); color:var(--color-text); padding:0.75rem 1rem; border-radius:8px; font-family:'DM Mono', monospace; font-size:0.85rem; opacity:0; pointer-events:none; transition:opacity 0.3s; box-shadow:0 8px 32px rgba(0,0,0,0.5); transform:translate(-50%, -100%);">
       <div id="speech-text">Hi, I'm Shubham 👋</div>
-      <div style="position:absolute; bottom:-6px; left:50%; transform:translateX(-50%) rotate(45deg); width:10px; height:10px; background:var(--surface-color); border-right:1px solid var(--border-color); border-bottom:1px solid var(--border-color);"></div>
+      <div style="position:absolute; bottom:-6px; left:50%; transform:translateX(-50%) rotate(45deg); width:10px; height:10px; background:var(--color-surface); border-right:1px solid var(--color-border); border-bottom:1px solid var(--color-border);"></div>
     </div>
   </div>
   <div id="portfolio" style="display: none; opacity: 0; transition: opacity 1s;">
@@ -205,7 +205,6 @@
     </section>
 
     
-    
     <!-- MY JOURNEY IN NUMBERS -->
     <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;" id="metrics">
       <div class="container">
@@ -229,7 +228,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- SOCIAL PROOF -->
     <section class="section" style="padding-top: 0; padding-bottom: var(--space-12);">
@@ -256,10 +254,8 @@
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="section__header">
-          
-<div class="section-label">// 01 — ABOUT</div>
+          <div class="section-label">// 01 — ABOUT</div>
 <h2 class="huge-heading">Driven by logic,<br>powered by curiosity.</h2>
-
         </div>
         <div class="about__grid fade-in">
           <div class="about__text">
@@ -547,12 +543,11 @@
       </div>
     </section>
 
-    
     <!-- CONTACT -->
-    <section class="section" id="contact" style="text-align: center; border-top: 1px solid var(--border-color); padding: 6rem 0;">
+    <section class="section" id="contact" style="text-align: center; border-top: 1px solid var(--color-border); padding: 6rem 0;">
       <div class="container fade-in" style="display: flex; flex-direction: column; align-items: center;">
         <div class="section-label">// 05 — CONTACT</div>
-        <h2 class="huge-heading" style="text-align: center;">Let's build<br><span style="color: var(--primary-color);">something</span><br>great.</h2>
+        <h2 class="huge-heading" style="text-align: center;">Let's build<br><span style="color: var(--color-primary);">something</span><br>great.</h2>
         <p class="hero__desc" style="margin: 2rem auto; max-width: 600px;">
           Whether it's a project collab, internship opportunity, or just a conversation about AI and code — my inbox is always open.
         </p>
@@ -562,7 +557,6 @@
         </div>
       </div>
     </section>
-
 
   </main>
 
@@ -812,100 +806,307 @@
 
 </script>
 
-
-
-  </div>
-
 <script>
 /* ═══════════════════════════ 3D AVATAR SYSTEM ═══════════════════════════ */
 const canvas = document.getElementById('three-canvas');
-const entryScreen = document.getElementById('entry-screen');
-const portfolio = document.getElementById('portfolio');
+const scene  = new THREE.Scene();
 
-const scene = new THREE.Scene();
 const W = window.innerWidth, H = window.innerHeight;
-const camera = new THREE.PerspectiveCamera(45, W/H, 0.1, 100);
+// For Hero section, we want it to cover the section
+const heroSec = document.querySelector('.hero');
+let heroW = heroSec.clientWidth;
+let heroH = heroSec.clientHeight;
+
+const camera = new THREE.PerspectiveCamera(45, heroW/heroH, 0.1, 100);
+// Position camera to put avatar on the right side of the screen
 camera.position.set(0, 3, 12);
 camera.lookAt(0, 1.5, 0);
 
 const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
-renderer.setSize(W, H);
+renderer.setSize(heroW, heroH);
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
+/* ─── LIGHTING & ENVIRONMENT ─── */
 scene.add(new THREE.AmbientLight(0xffffff, 0.4));
-const sun = new THREE.DirectionalLight(0xfff4e0, 1.2); sun.position.set(5, 8, 5); scene.add(sun);
-const rimLight = new THREE.SpotLight(0x6366f1, 2.0); rimLight.position.set(-5, 5, -5); scene.add(rimLight);
-const rimLight2 = new THREE.SpotLight(0xf59e0b, 1.5); rimLight2.position.set(5, 5, -5); scene.add(rimLight2);
+const sun = new THREE.DirectionalLight(0xfff4e0, 1.2);
+sun.position.set(5, 8, 5);
+sun.castShadow = true;
+sun.shadow.mapSize.width = 1024;
+sun.shadow.mapSize.height = 1024;
+sun.shadow.bias = -0.001;
+scene.add(sun);
 
+const rimLight = new THREE.SpotLight(0x6366f1, 2.0);
+rimLight.position.set(-5, 5, -5);
+rimLight.lookAt(0,2,0);
+scene.add(rimLight);
+
+const rimLight2 = new THREE.SpotLight(0xf59e0b, 1.5);
+rimLight2.position.set(5, 5, -5);
+rimLight2.lookAt(0,2,0);
+scene.add(rimLight2);
+
+// Floor Reflection
+const floorGeo = new THREE.PlaneGeometry(50, 50);
+const floorMat = new THREE.MeshStandardMaterial({
+    color: 0x09090b,
+    roughness: 0.2,
+    metalness: 0.8,
+    transparent: true,
+    opacity: 0.5
+});
+const floor = new THREE.Mesh(floorGeo, floorMat);
+floor.rotation.x = -Math.PI / 2;
+floor.position.y = -2.5;
+floor.receiveShadow = true;
+scene.add(floor);
+
+// Starfield
 const starGeo = new THREE.BufferGeometry();
-const starPos = new Float32Array(1200);
-for(let i=0; i<1200; i++) starPos[i] = (Math.random() - 0.5) * 40;
+const starCount = 400;
+const starPos = new Float32Array(starCount * 3);
+for(let i=0; i<starCount*3; i++) {
+    starPos[i] = (Math.random() - 0.5) * 40;
+}
 starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
-const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({color: 0xffffff, size: 0.05, opacity: 0.4, transparent: true}));
+const starMat = new THREE.PointsMaterial({color: 0xffffff, size: 0.05, transparent: true, opacity: 0.4});
+const stars = new THREE.Points(starGeo, starMat);
 scene.add(stars);
 
-// SIMPLE PROCEDURAL AVATAR
-const skinM = new THREE.MeshStandardMaterial({color:0xfde68a, roughness:0.4});
-const darkM = new THREE.MeshStandardMaterial({color:0x18181b, roughness:0.8});
+/* ─── PROCEDURAL RIG BUILDER ─── */
+const M = (hex, rough=0.7, metal=0.1) => new THREE.MeshStandardMaterial({color:hex, roughness:rough, metalness:metal});
+const skinM = M(0xfde68a, 0.4, 0.1);
+const darkM = M(0x18181b, 0.8, 0.2); 
+const pantsM= M(0x1e293b, 0.9, 0.1);
+const shoeM = M(0x09090b, 0.5, 0.5);
+const whiteM= M(0xfafafa, 0.2, 0.1);
+const eyeM  = M(0x09090b, 0.1, 0.8);
+const hairM = M(0x1c0a00, 0.8, 0.1);
+
 const charGroup = new THREE.Group();
-const torso = new THREE.Mesh(new THREE.BoxGeometry(1.2, 1.6, 0.7), darkM); torso.position.y = 1.3; charGroup.add(torso);
-const head = new THREE.Mesh(new THREE.BoxGeometry(1.1, 1.2, 1.1), skinM); head.position.y = 2.7; charGroup.add(head);
-const lArm = new THREE.Mesh(new THREE.CylinderGeometry(0.15,0.15,1.2), darkM); lArm.position.set(-0.75, 1.5, 0); charGroup.add(lArm);
-const rArm = new THREE.Mesh(new THREE.CylinderGeometry(0.15,0.15,1.2), darkM); rArm.position.set(0.75, 1.5, 0); charGroup.add(rArm);
-const lLeg = new THREE.Mesh(new THREE.CylinderGeometry(0.2,0.15,1.4), darkM); lLeg.position.set(-0.3, 0.2, 0); charGroup.add(lLeg);
-const rLeg = new THREE.Mesh(new THREE.CylinderGeometry(0.2,0.15,1.4), darkM); rLeg.position.set(0.3, 0.2, 0); charGroup.add(rLeg);
-charGroup.position.y = -0.5;
+const torsoScale = new THREE.Group(); 
+charGroup.add(torsoScale);
+
+const torsoGeo = new THREE.BoxGeometry(1.2, 1.6, 0.7);
+const posAttr = torsoGeo.attributes.position;
+for(let i=0; i<posAttr.count; i++){
+    if(posAttr.getY(i) < 0) posAttr.setX(i, posAttr.getX(i) * 0.85);
+}
+torsoGeo.computeVertexNormals();
+const torso = new THREE.Mesh(torsoGeo, darkM);
+torso.position.y = 1.3;
+torso.castShadow = true;
+torsoScale.add(torso);
+
+const neckG = new THREE.Group();
+neckG.position.set(0, 2.1, 0);
+torsoScale.add(neckG);
+
+const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.25, 0.4, 16), skinM);
+neck.position.y = 0.2;
+neck.castShadow = true;
+neckG.add(neck);
+
+const headG = new THREE.Group();
+headG.position.y = 0.4; 
+neckG.add(headG);
+
+const head = new THREE.Mesh(new THREE.BoxGeometry(1.1, 1.2, 1.1), skinM);
+head.position.y = 0.6;
+head.castShadow = true;
+headG.add(head);
+
+const hair = new THREE.Mesh(new THREE.BoxGeometry(1.18, 0.3, 1.18), hairM);
+hair.position.y = 1.25;
+hair.castShadow = true;
+headG.add(hair);
+const frontHair = new THREE.Mesh(new THREE.BoxGeometry(1.18, 0.2, 0.4), hairM);
+frontHair.position.set(0, 1.1, 0.4);
+frontHair.rotation.x = 0.2;
+headG.add(frontHair);
+
+const eyeL = new THREE.Group(); eyeL.position.set(-0.25, 0.6, 0.56); headG.add(eyeL);
+const eyeR = new THREE.Group(); eyeR.position.set(0.25, 0.6, 0.56); headG.add(eyeR);
+
+const scleraG = new THREE.PlaneGeometry(0.25, 0.15);
+const pupilG = new THREE.CircleGeometry(0.06, 16);
+
+const lSclera = new THREE.Mesh(scleraG, whiteM); eyeL.add(lSclera);
+const rSclera = new THREE.Mesh(scleraG, whiteM); eyeR.add(rSclera);
+
+const lPupil = new THREE.Mesh(pupilG, eyeM); lPupil.position.z = 0.01; eyeL.add(lPupil);
+const rPupil = new THREE.Mesh(pupilG, eyeM); rPupil.position.z = 0.01; eyeR.add(rPupil);
+
+const lidG = new THREE.PlaneGeometry(0.28, 0.18);
+const lidM = new THREE.MeshBasicMaterial({color: 0xfde68a}); 
+const lLid = new THREE.Mesh(lidG, lidM); lLid.position.z = 0.02; lLid.position.y = 0.1; eyeL.add(lLid);
+const rLid = new THREE.Mesh(lidG, lidM); rLid.position.z = 0.02; rLid.position.y = 0.1; eyeR.add(rLid);
+
+const armGeo = new THREE.CylinderGeometry(0.18, 0.15, 1.2, 16);
+armGeo.translate(0, -0.5, 0); 
+
+const lShoulder = new THREE.Group(); lShoulder.position.set(-0.75, 1.9, 0); torsoScale.add(lShoulder);
+const lArm = new THREE.Mesh(armGeo, darkM); lArm.castShadow = true; lShoulder.add(lArm);
+const lHand = new THREE.Mesh(new THREE.SphereGeometry(0.2, 16, 16), skinM); lHand.position.y = -1.1; lHand.castShadow = true; lShoulder.add(lHand);
+
+const rShoulder = new THREE.Group(); rShoulder.position.set(0.75, 1.9, 0); torsoScale.add(rShoulder);
+const rArm = new THREE.Mesh(armGeo, darkM); rArm.castShadow = true; rShoulder.add(rArm);
+const rHand = new THREE.Mesh(new THREE.SphereGeometry(0.2, 16, 16), skinM); rHand.position.y = -1.1; rHand.castShadow = true; rShoulder.add(rHand);
+
+const legGeo = new THREE.CylinderGeometry(0.22, 0.18, 1.4, 16);
+legGeo.translate(0, -0.6, 0); 
+
+const lHip = new THREE.Group(); lHip.position.set(-0.3, 0.5, 0); charGroup.add(lHip);
+const lLeg = new THREE.Mesh(legGeo, pantsM); lLeg.castShadow = true; lHip.add(lLeg);
+const lFoot = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.2, 0.4), shoeM); lFoot.position.set(0, -1.3, 0.05); lFoot.castShadow = true; lHip.add(lFoot);
+
+const rHip = new THREE.Group(); rHip.position.set(0.3, 0.5, 0); charGroup.add(rHip);
+const rLeg = new THREE.Mesh(legGeo, pantsM); rLeg.castShadow = true; rHip.add(rLeg);
+const rFoot = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.2, 0.4), shoeM); rFoot.position.set(0, -1.3, 0.05); rFoot.castShadow = true; rHip.add(rFoot);
+
+// Position character on the right side of the screen
+charGroup.position.set(4, -0.5, 0);
 scene.add(charGroup);
 
-let time = 0; let mouse = new THREE.Vector2(0,0);
-window.addEventListener('mousemove', e => { mouse.x = (e.clientX/W)*2-1; mouse.y = -(e.clientY/H)*2+1; });
+let time = 0;
+let mouse = new THREE.Vector2(0, 0);
+let targetHeadRot = new THREE.Vector2(0, 0);
+let targetEyePos = new THREE.Vector2(0, 0);
+let isBlinking = false;
+let blinkTimer = 0;
+let nextBlink = Math.random() * 3 + 2;
+let waveTimer = 0;
+let isWaving = false;
 
-let isEntered = false;
+window.addEventListener('mousemove', (e) => {
+    mouse.x = (e.clientX / W) * 2 - 1;
+    mouse.y = -(e.clientY / H) * 2 + 1;
+});
+
 const raycaster = new THREE.Raycaster();
-const bubble = document.getElementById('speech-bubble'); 
+const messages = [
+    "Hi, I'm Shubham 👋",
+    "Building AI-powered products",
+    "Creator of AutoSpend AI",
+    "Creator of INSUREFLOW AI",
+    "Exploring entrepreneurship"
+];
+let msgIndex = 0;
+let bubbleTimer = null;
+const bubble = document.getElementById('speech-bubble');
 const bubbleText = document.getElementById('speech-text');
 
-window.addEventListener('click', e => {
-    if(isEntered) return;
+window.addEventListener('click', (e) => {
     raycaster.setFromCamera(mouse, camera);
-    if(raycaster.intersectObject(charGroup, true).length > 0) {
-        bubbleText.innerText = "Welcome!";
+    const intersects = raycaster.intersectObject(charGroup, true);
+    if(intersects.length > 0) {
+        bubbleText.innerText = messages[msgIndex];
+        msgIndex = (msgIndex + 1) % messages.length;
         bubble.style.opacity = '1';
-        setTimeout(() => {
-            isEntered = true;
-            entryScreen.style.transform = 'translateY(-100vh)';
-            portfolio.style.display = 'block';
-            portfolio.style.opacity = '1';
-            setTimeout(() => { entryScreen.style.display = 'none'; }, 1200);
-        }, 800);
+        
+        if(!isWaving && Math.random() > 0.4) {
+            isWaving = true;
+            waveTimer = 0;
+        }
+
+        if(bubbleTimer) clearTimeout(bubbleTimer);
+        bubbleTimer = setTimeout(() => {
+            bubble.style.opacity = '0';
+        }, 3000);
     }
 });
 
 function animate() {
-    if(!isEntered) requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
     time += 0.016;
-    head.rotation.y += (mouse.x * 0.5 - head.rotation.y) * 0.1;
-    head.rotation.x += (-mouse.y * 0.3 - head.rotation.x) * 0.1;
-    torso.scale.y = 1 + Math.sin(time*2)*0.02;
-    stars.rotation.y = time * 0.02 + mouse.x * 0.1;
+
+    const breath = Math.sin(time * 2);
+    torsoScale.scale.y = 1 + breath * 0.015;
+    torsoScale.scale.x = 1 + breath * 0.005;
     
-    if(bubble.style.opacity === '1' && !isEntered) {
-        const hP = new THREE.Vector3(); head.getWorldPosition(hP); hP.y += 1; hP.project(camera);
-        bubble.style.left = `${(hP.x*.5+.5)*W}px`; bubble.style.top = `${(-hP.y*.5+.5)*H-20}px`;
+    if(!isWaving) {
+        lShoulder.rotation.z = 0.1 + breath * 0.02;
+        rShoulder.rotation.z = -0.1 - breath * 0.02;
+        lShoulder.rotation.x = Math.sin(time * 1.5) * 0.05;
+        rShoulder.rotation.x = Math.cos(time * 1.5) * 0.05;
+    } else {
+        waveTimer += 0.016;
+        rShoulder.rotation.z = -2.5; 
+        rShoulder.rotation.x = Math.sin(waveTimer * 15) * 0.3; 
+        if(waveTimer > 1.5) isWaving = false;
     }
+
+    targetHeadRot.x = -mouse.y * 0.5; 
+    targetHeadRot.y = mouse.x * 0.8;  
+    
+    headG.rotation.x += (targetHeadRot.x - headG.rotation.x) * 0.1;
+    headG.rotation.y += (targetHeadRot.y - headG.rotation.y) * 0.1;
+
+    targetEyePos.x = mouse.x * 0.04;
+    targetEyePos.y = mouse.y * 0.04;
+    lPupil.position.x += (targetEyePos.x - lPupil.position.x) * 0.3;
+    rPupil.position.x += (targetEyePos.x - rPupil.position.x) * 0.3;
+    lPupil.position.y += (targetEyePos.y - lPupil.position.y) * 0.3;
+    rPupil.position.y += (targetEyePos.y - rPupil.position.y) * 0.3;
+
+    blinkTimer += 0.016;
+    if(blinkTimer > nextBlink) {
+        isBlinking = true;
+        blinkTimer = 0;
+        nextBlink = Math.random() * 3 + 2; 
+    }
+
+    if(isBlinking) {
+        lLid.position.y -= 0.03;
+        rLid.position.y -= 0.03;
+        if(lLid.position.y <= 0) isBlinking = false;
+    } else {
+        if(lLid.position.y < 0.15) {
+            lLid.position.y += 0.02;
+            rLid.position.y += 0.02;
+        }
+    }
+
+    if(Math.abs(mouse.x) < 0.2 && Math.abs(mouse.y) < 0.2) {
+        if(Math.random() < 0.005) {
+            headG.rotation.y += (Math.random() - 0.5) * 0.5;
+        }
+    }
+
+    if(bubble.style.opacity === '1') {
+        const headPos = new THREE.Vector3();
+        head.getWorldPosition(headPos);
+        headPos.y += 1.0; 
+        headPos.project(camera);
+        
+        const rect = canvas.getBoundingClientRect();
+        const x = (headPos.x * .5 + .5) * rect.width + rect.left;
+        const y = (-(headPos.y * .5) + .5) * rect.height + rect.top;
+        
+        bubble.style.left = `${x}px`;
+        bubble.style.top = `${y - 20}px`;
+    }
+
+    stars.rotation.y = mouse.x * 0.1 + time * 0.02;
+    stars.rotation.x = -mouse.y * 0.1;
+
     renderer.render(scene, camera);
 }
+
 animate();
 
 window.addEventListener('resize', ()=>{
-  if(!isEntered) {
-      camera.aspect = window.innerWidth/window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-  }
+  heroW = heroSec.clientWidth;
+  heroH = heroSec.clientHeight;
+  camera.aspect = heroW/heroH;
+  camera.updateProjectionMatrix();
+  renderer.setSize(heroW, heroH);
 });
 </script>
 
+  </div>
 </body>
 
 </html>
