@@ -115,14 +115,6 @@ ul, ol { list-style: none; }
   align-items: center;
   gap: 0.5rem;
 }
-.label-mono::before {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 1px;
-  background: var(--accent-primary);
-}
-
 .heading-massive {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
