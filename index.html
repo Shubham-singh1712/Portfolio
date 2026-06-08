@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -49,30 +50,9 @@
     }
   </style>
 
-</head>
-<body>
 
-<script>
-    // GitHub API Integration
-    fetch('https://api.github.com/users/Shubham-singh1712')
-      .then(response => response.json())
-      .then(data => {
-        const repos = data.public_repos;
-        if (repos !== undefined) {
-          const stats = document.querySelectorAll('.stat');
-          stats.forEach(stat => {
-            if (stat.innerText.includes('Live Deployments')) {
-              const numDiv = stat.querySelector('.stat-num');
-              if (numDiv) {
-                numDiv.setAttribute('data-count', repos);
-                stat.querySelector('.stat-label').innerText = 'Public Repos';
-              }
-            }
-          });
-        }
-      })
-      .catch(err => console.log('GitHub fetch error:', err));
-</script>
+</head>
+<body class="dark-theme">
 
 </body>
 </html>
