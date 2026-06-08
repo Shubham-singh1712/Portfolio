@@ -790,14 +790,13 @@ html, body {
 
   /* Typography Scale */
   .hero-name {
-    font-size: clamp(2.5rem, 12vw, 3.5rem) !important;
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
     line-height: 1 !important;
     letter-spacing: -0.02em !important;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    word-break: normal;
   }
   .hero-name span {
     display: block;
@@ -862,7 +861,7 @@ html, body {
 
   /* Responsive General Spacing */
   .section-premium {
-    padding: 4rem 1rem !important;
+    padding: 4rem 1rem;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -895,8 +894,9 @@ html, body {
 
 @media (max-width: 640px) {
   .heading-massive {
-    font-size: clamp(2.2rem, 8vw, 2.8rem) !important;
-    word-break: break-word;
+    font-size: clamp(2rem, 8vw, 2.5rem) !important;
+    white-space: normal !important;
+    word-break: normal !important;
     width: 100%;
   }
   .heading-section {
