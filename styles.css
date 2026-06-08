@@ -290,27 +290,44 @@ ul, ol { list-style: none; }
   align-items: center;
 }
 .nav-logo {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  color: var(--text-main);
-  text-transform: uppercase;
+  color: #fff;
   letter-spacing: -0.02em;
 }
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 .nav-links a {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   transition: color 0.2s;
 }
 .nav-links a:hover {
-  color: var(--accent-primary);
+  color: var(--text-main);
+}
+.nav-resume-btn {
+  background: var(--accent-primary);
+  color: #000 !important;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-resume-btn:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .nav-resume-btn { display: none; }
 }
 
 /* Page Sections */
