@@ -211,74 +211,59 @@
 
     <section class="section-premium" id="projects">
       <div class="container">
-        <h2 class="heading-section reveal-up">Engineered for scale.</h2>
-
-        <!-- AutoSpend AI -->
-        <div class="project-showcase reveal-up">
-          <div class="showcase-content">
-            <div class="pill-group"><span class="pill accent">Actively Developing</span></div>
-            <h3 class="heading-section" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; text-transform:none;">Auto Spend AI</h3>
-            <p class="text-body">
-              AI-powered expense management platform that extracts transactions from receipts, screenshots, and text inputs. Features smart categorization, analytics dashboards, AI-assisted review workflows, and expense insights.
-            </p>
-            <div class="pill-group" style="margin-bottom: var(--space-md);">
-              <span class="pill">React</span><span class="pill">FastAPI</span><span class="pill">PostgreSQL</span><span class="pill">AI OCR</span>
-            </div>
-            <div class="btn-group">
-              <a href="projects/autospend-ai/index.html" class="btn btn-primary">View Case Study</a>
-              <a href="https://github.com/Shubham-singh1712/AutoSpend-AI" class="btn btn-secondary">GitHub</a>
-            </div>
-          </div>
-          <div class="showcase-visual">
-            <img src="projects/autospend-ai/mockup.jpg" alt="Auto Spend AI Interface" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000';" />
-          </div>
+        
+        <div class="label-mono reveal-up" style="margin-bottom: 1rem; color: var(--accent-primary);">
+          // 03 &mdash; FEATURED PROJECTS
         </div>
+        <h2 class="heading-massive reveal-up" style="font-size: clamp(3rem, 8vw, 6rem); margin-bottom: 3rem; text-transform: none;">Things I've built.</h2>
 
-        <!-- InsureFlow AI -->
-        <div class="project-showcase reverse reveal-up" style="margin-top: var(--space-xl);">
-          <div class="showcase-content">
-            <div class="pill-group"><span class="pill accent">Completed</span></div>
-            <h3 class="heading-section" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; text-transform:none;">InsureFlow AI</h3>
-            <p class="text-body">
-              AI-powered insurance claims automation platform that processes medical documents, validates claim information, detects anomalies, and provides intelligent review workflows for faster claim settlement.
-            </p>
-            <div class="pill-group" style="margin-bottom: var(--space-md);">
-              <span class="pill">React</span><span class="pill">FastAPI</span><span class="pill">AI Agents</span><span class="pill">OCR</span>
+        <div class="bento-grid-2 reveal-up" style="gap: 2rem;">
+          
+          <!-- InsureFlow AI Card -->
+          <div class="glass-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; border-radius: 16px;">
+            <div>
+              <div class="label-mono" style="color: var(--accent-primary); margin-bottom: 1.5rem; font-size: 0.85rem;">01 / InsureFlow AI</div>
+              <h3 style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: white; margin-bottom: 1rem;">InsureFlow AI</h3>
+              <p class="text-body" style="line-height: 1.8; color: var(--text-muted);">
+                AI-powered insurance claims automation accelerating medical document validation and fraud detection using hybrid OCR + LLM pipelines.
+              </p>
+              <div class="pill-group" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">React</span>
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">FastAPI</span>
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">AI Agents</span>
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">OCR</span>
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">Claude API</span>
+              </div>
             </div>
-            <div class="btn-group">
-              <a href="projects/insureflow-ai/index.html" class="btn btn-primary">View Case Study</a>
-              <a href="https://github.com/Shubham-singh1712/InsureFlow-AI" class="btn btn-secondary">GitHub</a>
+            <a href="projects/insureflow-ai/index.html" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; transition: color 0.3s; margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--text-muted)'">
+              View Case Study ↗
+            </a>
+          </div>
+
+          <!-- AutoSpend AI Card -->
+          <div class="glass-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; border-radius: 16px;">
+            <div>
+              <div class="label-mono" style="color: var(--accent-primary); margin-bottom: 1.5rem; font-size: 0.85rem;">02 / AutoSpend AI</div>
+              <h3 style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: white; margin-bottom: 1rem;">AutoSpend AI</h3>
+              <p class="text-body" style="line-height: 1.8; color: var(--text-muted);">
+                AI-powered expense management that automatically categorizes transactions from receipts and text inputs with intelligent analytics.
+              </p>
+              <div class="pill-group" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">React</span>
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">FastAPI</span>
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">PostgreSQL</span>
+                <span class="pill" style="border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-primary); background: transparent;">AI</span>
+              </div>
             </div>
+            <a href="projects/autospend-ai/index.html" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; transition: color 0.3s; margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--text-muted)'">
+              View Case Study ↗
+            </a>
           </div>
-          <div class="showcase-visual">
-            <img src="projects/insureflow-ai/mockup.jpg" alt="InsureFlow AI Interface" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000';" />
-          </div>
+
         </div>
         
-        
-        <!-- AI Chatbot -->
-        <div class="project-showcase reveal-up" style="margin-top: var(--space-xl);">
-          <div class="showcase-content">
-            <div class="pill-group"><span class="pill accent">Completed</span></div>
-            <h3 class="heading-section" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; text-transform:none;">AI Chatbot System</h3>
-            <p class="text-body">
-              Advanced conversational AI assistant capable of maintaining context across sessions, executing external API calls, and generating structured responses. Built with a focus on low latency and highly accurate intent recognition.
-            </p>
-            <div class="pill-group" style="margin-bottom: var(--space-md);">
-              <span class="pill">Next.js</span><span class="pill">FastAPI</span><span class="pill">LangChain</span><span class="pill">OpenAI</span>
-            </div>
-            <div class="btn-group">
-              <a href="projects/ai-chatbot/index.html" class="btn btn-primary">View Case Study</a>
-              <a href="https://github.com/Shubham-singh1712" class="btn btn-secondary">GitHub</a>
-            </div>
-          </div>
-          <div class="showcase-visual">
-            <img src="projects/ai-chatbot/mockup.jpg" alt="AI Chatbot Interface" onerror="this.src='https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=1000';" />
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: var(--space-lg);" class="reveal-up">
-           <a href="projects/index.html" class="btn btn-secondary">View All Projects →</a>
+        <div class="reveal-up" style="text-align: center; margin-top: 4rem;">
+            <a href="projects/index.html" class="btn" style="border: 1px solid var(--border-strong); background: transparent; color: white; padding: 1rem 2rem;">View All Projects</a>
         </div>
 
       </div>
