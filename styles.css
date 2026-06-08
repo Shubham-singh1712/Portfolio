@@ -1465,3 +1465,59 @@ body {
   animation: pulse 2s infinite;
 }
 @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin: 4rem 0;
+}
+.stat-box {
+  padding: 3rem 1rem;
+  text-align: center;
+  border-right: 1px solid var(--border-color);
+}
+.stat-box:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-box { border-bottom: 1px solid var(--border-color); }
+  .stat-box:nth-child(even) { border-right: none; }
+}
+
+/* SECTION HEADINGS */
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.huge-heading {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+}

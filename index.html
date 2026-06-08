@@ -205,37 +205,31 @@
     </section>
 
     
+    
     <!-- MY JOURNEY IN NUMBERS -->
-    <section class="section" style="padding-top: var(--space-6); padding-bottom: var(--space-12);" id="metrics">
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;" id="metrics">
       <div class="container">
-        <div class="section__header" style="margin-bottom: var(--space-6);">
-          <h2 class="section__title" style="font-size: var(--text-xl);">My Journey in Numbers</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4);" class="fade-in">
-          
-          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
-            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="3">0</span>+</div>
-            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">AI Projects Built</div>
+        <div class="stats-grid fade-in">
+          <div class="stat-box">
+            <div class="stat-num">4+</div>
+            <div class="stat-label">AI Projects</div>
           </div>
-
-          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
-            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="4">0</span>+</div>
-            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">Certifications</div>
+          <div class="stat-box">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Certifications</div>
           </div>
-
-          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
-            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="3">0</span>+</div>
-            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">Live Deployments</div>
+          <div class="stat-box">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Live Deployments</div>
           </div>
-
-          <div class="project-card" style="padding: var(--space-6); text-align: center; align-items: center; justify-content: center;">
-            <div style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary);"><span class="counter" data-target="200">0</span>+</div>
-            <div style="font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;">GitHub Contributions</div>
+          <div class="stat-box">
+            <div class="stat-num" id="github-stat">200+</div>
+            <div class="stat-label">GitHub Contributions</div>
           </div>
-
         </div>
       </div>
     </section>
+
 
     <!-- SOCIAL PROOF -->
     <section class="section" style="padding-top: 0; padding-bottom: var(--space-12);">
@@ -262,7 +256,10 @@
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="section__header">
-          <h2 class="section__title" id="about-title">About Me</h2>
+          
+<div class="section-label">// 01 — ABOUT</div>
+<h2 class="huge-heading">Driven by logic,<br>powered by curiosity.</h2>
+
         </div>
         <div class="about__grid fade-in">
           <div class="about__text">
@@ -550,40 +547,22 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="contact fade-in">
-          <p class="contact__eyebrow">Get in Touch</p>
-          <h2 class="contact__title" id="contact-title">Let's build something together</h2>
-          
-          <p class="contact__desc">
-            Whether it's a project collab, internship opportunity, or just a conversation about circuits and code — my
-            inbox is always open.
-          </p>
-          <div class="contact__actions">
-            <a href="mailto:shubham.sin06@gmail.com" class="btn btn--primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22 6 12 13 2 6" />
-              </svg>
-              Say Hello
-            </a>
-            <a href="Shubham_singh_Resume.pdf" target="_blank" class="btn btn--ghost">View Resume</a>
-            <a href="https://www.linkedin.com/in/shubham-singh-579059216/" target="_blank" rel="noopener noreferrer"
-              class="btn btn--ghost">
-              LinkedIn
-            </a>
-            <a href="https://github.com/Shubham-singh1712" target="_blank" rel="noopener noreferrer"
-              class="btn btn--ghost">
-              GitHub
-            </a>
-          </div>
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="text-align: center; border-top: 1px solid var(--border-color); padding: 6rem 0;">
+      <div class="container fade-in" style="display: flex; flex-direction: column; align-items: center;">
+        <div class="section-label">// 05 — CONTACT</div>
+        <h2 class="huge-heading" style="text-align: center;">Let's build<br><span style="color: var(--primary-color);">something</span><br>great.</h2>
+        <p class="hero__desc" style="margin: 2rem auto; max-width: 600px;">
+          Whether it's a project collab, internship opportunity, or just a conversation about AI and code — my inbox is always open.
+        </p>
+        <div class="hero__actions" style="justify-content: center; gap: 1rem; display: flex;">
+          <a href="mailto:your.email@example.com" class="btn btn--primary">Say Hello →</a>
+          <a href="Shubham_singh_Resume.pdf" class="btn btn--secondary" target="_blank">View Resume</a>
         </div>
       </div>
     </section>
+
 
   </main>
 
