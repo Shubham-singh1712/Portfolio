@@ -124,11 +124,11 @@ ul, ol { list-style: none; }
 .heading-massive {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(4rem, 12vw, 10rem);
+  font-size: clamp(4rem, 8vw, 11rem); word-wrap: normal; white-space: nowrap;
   line-height: 0.9;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  margin-bottom: var(--space-md);
+  margin-bottom: 0;
 }
 
 .heading-massive.outline {
@@ -143,7 +143,7 @@ ul, ol { list-style: none; }
   line-height: 1.05;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-bottom: var(--space-md);
+  margin-bottom: 0;
 }
 
 .heading-card {
@@ -159,7 +159,7 @@ ul, ol { list-style: none; }
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   color: var(--text-muted);
   max-width: 700px;
-  margin-bottom: var(--space-md);
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -402,4 +402,62 @@ ul, ol { list-style: none; }
   .nav-links { display: none; } /* Add mobile menu later */
   .metrics-grid { grid-template-columns: 1fr 1fr; }
   .section-premium { padding: var(--space-lg) 0; }
+}
+
+/* JOURNEY MILESTONES */
+.timeline-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+  position: relative;
+}
+.timeline-grid::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 40px;
+  width: 2px;
+  background: var(--border-strong);
+  z-index: 0;
+}
+.milestone-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+.milestone-icon {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-strong);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900; font-size: 1.5rem; color: var(--accent-primary);
+  box-shadow: 0 0 20px var(--accent-primary-glow);
+}
+@media (max-width: 768px) {
+  .timeline-grid::before { left: 30px; }
+  .milestone-card { grid-template-columns: 60px 1fr; gap: var(--space-sm); }
+  .milestone-icon { width: 60px; height: 60px; font-size: 1.2rem; }
+}
+
+/* CERTIFICATIONS */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* RESPONSIVE NAV */
+.menu-btn {
+  display: none;
+  background: transparent; border: none; color: var(--text-main); cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
 }
