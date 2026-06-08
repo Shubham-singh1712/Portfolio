@@ -3,8 +3,8 @@
    PREMIUM SAAS DESIGN SYSTEM
    ========================================================================== */
 
-@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   /* Colors */
@@ -24,9 +24,9 @@
   --border-strong: rgba(255, 255, 255, 0.15);
   
   /* Typography Scale */
-  --font-display: 'Cabinet Grotesk', sans-serif;
-  --font-body: 'Satoshi', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --font-display: 'Clash Display', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -102,6 +102,8 @@ ul, ol { list-style: none; }
 /* ==========================================================================
    TYPOGRAPHY
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 .label-mono {
   font-family: var(--font-mono);
   font-size: 0.875rem;
@@ -122,18 +124,17 @@ ul, ol { list-style: none; }
 }
 
 .heading-massive {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(4rem, 10vw, 11rem); word-wrap: normal; white-space: nowrap;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(5rem, 12vw, 12rem); word-wrap: normal; white-space: nowrap;
+  line-height: 1;
+  letter-spacing: -0.02em;
   margin-bottom: 0;
 }
 
 .heading-massive.outline {
   color: transparent;
-  -webkit-text-stroke: 2px var(--border-strong);
+  -webkit-text-stroke: 2px var(--accent-primary);
 }
 
 .heading-section {
@@ -460,4 +461,55 @@ ul, ol { list-style: none; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .menu-btn { display: block; }
+}
+
+
+/* BENTO GRIDS & GLOW CARDS */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.bento-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .bento-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+.glow-card {
+  position: relative;
+  background: rgba(18, 18, 20, 0.4);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.glow-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+}
+.glow-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 40%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+.glow-card:hover::before {
+  opacity: 0.05;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: white;
 }

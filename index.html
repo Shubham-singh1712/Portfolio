@@ -39,20 +39,23 @@
     <!-- HERO -->
     <section class="section-premium" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: var(--nav-height);">
       <div class="container reveal-up">
-        <div class="pill-group" style="justify-content: center;">
-          <span class="pill accent">✦ Open to Opportunities · Bangalore</span>
+        <div class="pill-group" style="justify-content: center; margin-bottom: 2rem;">
+          <span class="pill" style="border: 1px solid var(--accent-secondary); background: transparent; color: var(--accent-primary); padding: 0.5rem 1.5rem; font-family: var(--font-mono); font-size: 0.85rem; border-radius: 50px;">
+            <span style="color: var(--accent-primary); margin-right: 4px;">● ✦</span> Open to Opportunities · Bangalore
+          </span>
         </div>
         
-        <h1 class="heading-massive" style="line-height: 1; padding-bottom: 0.05em;">SHUBHAM</h1>
-        <h1 class="heading-massive outline" style="line-height: 1; padding-bottom: 0.2em;">SINGH</h1>
+        <h1 class="heading-massive" style="line-height: 1; padding-bottom: 0.05em;">Shubham</h1>
+        <h1 class="heading-massive outline" style="line-height: 1; padding-bottom: 0.2em; margin-top: -0.2em;">Singh</h1>
         
-        <p class="text-body" style="margin: 2rem auto;">
-          Computer Science Engineering student at <strong>KIIT Bhubaneswar</strong> — building AI-powered products that bridge the gap between raw LLMs and real-world impact.
+        <p class="text-body" style="margin: 2.5rem auto; font-family: 'Inter', sans-serif; font-size: 1.15rem; max-width: 600px; color: #a1a1aa; line-height: 1.8;">
+          Computer Science Engineering student at <strong style="color: white; font-weight: 600;">KIIT Bhubaneswar</strong> , driven by a passion for software development, problem-solving, and building innovative applications that make a real impact.
         </p>
 
-        <div class="btn-group" style="justify-content: center;">
-          <a href="#projects" class="btn btn-primary">View Products</a>
-          <a href="Shubham_singh_Resume.pdf" target="_blank" class="btn btn-secondary">Resume</a>
+        <div class="btn-group" style="justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+          <a href="#projects" class="btn" style="background: var(--accent-primary); color: #000; border-radius: 8px; font-weight: 600; padding: 1rem 2rem; border: none;">View Projects →</a>
+          <a href="#contact" class="btn" style="background: transparent; color: white; border: 1px solid var(--border-strong); border-radius: 8px; padding: 1rem 2rem;">Get in Touch</a>
+          <a href="Shubham_singh_Resume.pdf" target="_blank" class="btn" style="background: transparent; color: white; border: 1px solid var(--border-strong); border-radius: 8px; padding: 1rem 2rem;">Resume</a>
         </div>
       </div>
     </section>
@@ -84,29 +87,78 @@
     <!-- ABOUT -->
     <section class="section-premium" id="about">
       <div class="container reveal-up">
-        <div class="label-mono">// 01 — Philosophy</div>
-        <h2 class="heading-section">Driven by logic,<br>powered by curiosity.</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin-top: var(--space-lg);">
-          <p class="text-body" style="margin:0;">
-            I'm deeply interested in the intersection of logic and real-world application — whether it's building scalable web applications, designing efficient algorithms, or writing clean and maintainable code. Outside lectures, you'll find me editing videos, playing cricket, or diving into Bollywood music. I believe good engineers are also good communicators, and I actively work on both.
-          </p>
-          <div class="glass-card">
-            <h3 class="heading-card" style="font-size: 1.5rem;">Core Stack</h3>
-            <div class="pill-group" style="margin-top: 1rem;">
-              <span class="pill">Python</span>
-              <span class="pill">FastAPI</span>
-              <span class="pill">React</span>
-              <span class="pill">Next.js</span>
-              <span class="pill">PostgreSQL</span>
-              <span class="pill">LangChain</span>
-              <span class="pill">Three.js</span>
+        
+        <div style="max-width: 900px; margin-bottom: var(--space-xl);">
+            <h2 class="heading-massive" style="font-size: clamp(2.5rem, 5vw, 4rem); text-transform: none; letter-spacing: -0.02em; margin-bottom: var(--space-md);">Tech Ex</h2>
+            
+            <p class="text-body" style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.8; color: var(--text-muted); max-width: 100%; margin-bottom: 1.5rem;">
+                Hi, I'm Shubham Singh, a Computer Science Engineering student at <strong style="color: white;">KIIT Bhubaneswar</strong>. I enjoy building AI-powered products, full-stack applications, and software that solves real-world problems.
+            </p>
+            <p class="text-body" style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.8; color: var(--text-muted); max-width: 100%; margin-bottom: 1.5rem;">
+                My journey started with learning C and Python, and has evolved into developing projects such as AutoSpend AI, INSUREFLOW AI, and intelligent chatbot systems. Through these projects, I've explored AI workflows, OCR, automation, backend systems, databases, and modern web development.
+            </p>
+            <p class="text-body" style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.8; color: var(--text-muted); max-width: 100%;">
+                Beyond coding, I'm passionate about entrepreneurship, product thinking, and creating technology that delivers meaningful impact. I'm currently focused on AI applications, full-stack development, cloud technologies, and freelancing opportunities while continuously learning and building, providing all the resources.
+            </p>
+        </div>
+
+        <h2 class="heading-massive" style="font-size: clamp(2.5rem, 5vw, 4rem); text-transform: none; letter-spacing: -0.02em; margin-bottom: var(--space-lg);">Why Work With Me</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Card 1 -->
+            <div class="glass-card" style="padding: 2rem; border-radius: 16px; background: rgba(18, 18, 20, 0.4); border: 1px solid var(--border-strong); transition: transform 0.3s, background 0.3s;">
+                <div style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; color: white; margin-bottom: 1rem;">Building AI-Powered Products</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1rem; color: #a1a1aa; line-height: 1.6;">Bridging the gap between raw LLMs and intuitive user experiences.</p>
             </div>
-          </div>
+
+            <!-- Card 2 -->
+            <div class="glass-card" style="padding: 2rem; border-radius: 16px; background: rgba(18, 18, 20, 0.4); border: 1px solid var(--border-strong); transition: transform 0.3s, background 0.3s;">
+                <div style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </div>
+                <h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; color: white; margin-bottom: 1rem;">Strong Problem-Solving</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1rem; color: #a1a1aa; line-height: 1.6;">Deep focus on Data Structures, Algorithms, and logical architectures.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-card" style="padding: 2rem; border-radius: 16px; background: rgba(18, 18, 20, 0.4); border: 1px solid var(--border-strong); transition: transform 0.3s, background 0.3s;">
+                <div style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; color: white; margin-bottom: 1rem;">Full-Stack Experience</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1rem; color: #a1a1aa; line-height: 1.6;">From React interfaces to FastAPI backends and PostgreSQL databases.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass-card" style="padding: 2rem; border-radius: 16px; background: rgba(18, 18, 20, 0.4); border: 1px solid var(--border-strong); transition: transform 0.3s, background 0.3s;">
+                <div style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; color: white; margin-bottom: 1rem;">Passion for Entrepreneurship</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1rem; color: #a1a1aa; line-height: 1.6;">Driven to build things that solve real user problems and create value.</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="glass-card" style="padding: 2rem; border-radius: 16px; background: rgba(18, 18, 20, 0.4); border: 1px solid var(--border-strong); transition: transform 0.3s, background 0.3s;">
+                <div style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </div>
+                <h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; color: white; margin-bottom: 1rem;">Continuous Learner</h3>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1rem; color: #a1a1aa; line-height: 1.6;">Constantly exploring new tech stacks, cloud services, and system designs.</p>
+            </div>
+
         </div>
       </div>
     </section>
 
     <!-- FEATURED PROJECTS (SAAS STYLE) -->
+
+
+
     <section class="section-premium" id="projects">
       <div class="container">
         <div class="label-mono reveal-up">// 02 — Featured Products</div>
@@ -154,6 +206,28 @@
           </div>
         </div>
         
+        
+        <!-- AI Chatbot -->
+        <div class="project-showcase reveal-up" style="margin-top: var(--space-xl);">
+          <div class="showcase-content">
+            <div class="pill-group"><span class="pill accent">Completed</span></div>
+            <h3 class="heading-section" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; text-transform:none;">AI Chatbot System</h3>
+            <p class="text-body">
+              Advanced conversational AI assistant capable of maintaining context across sessions, executing external API calls, and generating structured responses. Built with a focus on low latency and highly accurate intent recognition.
+            </p>
+            <div class="pill-group" style="margin-bottom: var(--space-md);">
+              <span class="pill">Next.js</span><span class="pill">FastAPI</span><span class="pill">LangChain</span><span class="pill">OpenAI</span>
+            </div>
+            <div class="btn-group">
+              <a href="projects/ai-chatbot/index.html" class="btn btn-primary">View Case Study</a>
+              <a href="https://github.com/Shubham-singh1712" class="btn btn-secondary">GitHub</a>
+            </div>
+          </div>
+          <div class="showcase-visual">
+            <img src="projects/ai-chatbot/mockup.jpg" alt="AI Chatbot Interface" onerror="this.src='https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=1000';" />
+          </div>
+        </div>
+
         <div style="text-align: center; margin-top: var(--space-lg);" class="reveal-up">
            <a href="projects/index.html" class="btn btn-secondary">View All Projects →</a>
         </div>
