@@ -1,46 +1,68 @@
-# Goal
-Fix all mobile responsiveness issues (<=768px) across the entire portfolio, ensuring zero horizontal scrolling, a properly functioning mobile menu, and an optimized mobile layout without altering the desktop experience.
+# Implementation Plan - Device-Specific Splash Screens
 
-## User Review Required
-Please review the proposed global CSS overrides, mobile menu overhaul, and the HTML structure changes for the rotating role text in the About section. 
+We will build responsive, interactive splash screens for desktop (≥1024px) and mobile (<1024px) based on the design mockups. Clicking either CTA will trigger a synchronized transition: the character and glow move upward/expand, the splash screen fades out, and the main portfolio content is revealed.
 
 ## Proposed Changes
 
-### `styles.css`
-All changes will be scoped inside `@media (max-width: 768px)` or applied globally in a way that does not affect desktop.
+### Assets Integration
+We will copy the design assets from the artifacts directory to the workspace root:
+- `media__1781117784128.png` -> [splash-desktop.png](file:///c:/Users/SHUBHAM/OneDrive/Documents/Portfolio/splash-desktop.png) (1024x576, widescreen cinematic)
+- `media__1781117784140.jpg` -> [splash-mobile.jpg](file:///c:/Users/SHUBHAM/OneDrive/Documents/Portfolio/splash-mobile.jpg) (682x1024, portrait poster)
 
-1. **Global Overflow Fix:**
-   - Add `html, body { overflow-x: hidden; width: 100%; position: relative; }` to prevent any horizontal scrolling globally.
+---
 
-2. **Mobile Navigation Overhaul:**
-   - Modify `.mobile-menu-overlay` to act as a proper full-screen overlay with a solid background and flexbox alignment (`flex-direction: column`, `align-items: center`, `justify-content: center`).
-   - Style `.mobile-nav-links` to stack vertically with a large gap (e.g., `gap: 1.5rem`), centering the text.
-   - Adjust the font size of mobile links to prevent the "giant overlapping text" issue.
+### Splash Screen HTML & Layout
 
-3. **Hero Tweaks:**
-   - Ensure the hero name spans explicitly force a line break (`display: block; width: 100%;`).
-   - Add `box-sizing: border-box;` and padding to `.hero-section-main` to keep content inside the viewport.
+#### [MODIFY] [index.html](file:///c:/Users/SHUBHAM/OneDrive/Documents/Portfolio/index.html)
+- Inject the `#splash-wrapper` HTML at the very top of `<body>`.
+- Create two separate containers: `.splash-desktop` (active for ≥1024px) and `.splash-mobile` (active for <1024px) inside the wrapper to ensure independent, device-specific layouts.
+- In both layouts, use an **Aspect-Ratio Box** to contain the background image and overlays. This ensures that text, buttons, and graphics align pixel-perfectly with the design images across all screen shapes (e.g., ultrawide desktops, iPads, different mobile models) without clipping.
+- Implement the interactive overlays:
+  - **Desktop CTA:** A glassmorphic button with border-glow and reflection sweep effects overlaying the image CTA.
+  - **Mobile CTA:** A circular interactive button with `↗` and a pulsing border ring overlaying the image circle.
+  - **Progression Timelines:** Overlay interactive text links for both desktop and mobile timelines.
+  - **Canvas Particle System:** Add a `<canvas id="splash-particles">` layer to render rising orange sparks that react to the mouse.
 
-4. **Project Cards:**
-   - Add responsive CSS for project tags: `.pill-group { flex-wrap: wrap; gap: 0.5rem; }`.
-   - Add `box-sizing: border-box;` to the `.glass-card` elements to prevent padding from expanding the element width.
+#### [MODIFY] [styles.css](file:///c:/Users/SHUBHAM/OneDrive/Documents/Portfolio/styles.css)
+- Add styles for `#splash-wrapper` (`position: fixed; inset: 0; background: #000; z-index: 9999; overflow: hidden;`).
+- Implement the aspect-ratio container system:
+  - Desktop: `aspect-ratio: 16 / 9; max-width: 100vw; max-height: 100vh;` centered with flex/grid.
+  - Mobile: `aspect-ratio: 9 / 16; max-width: 100vw; max-height: 100vh;` centered.
+- Code the premium effects:
+  - **Glass CTA:** Glassmorphism styles (frosted backdrop blur, semi-transparent background, subtle outline, orange glow on hover, and an animated diagonal shine/reflection sweep).
+  - **Pulsing Mobile CTA:** Circular pulsing animations (`@keyframes pulse`) for the mobile button border.
+  - **Timeline Styling:** Dots, lines, and active glows (`box-shadow: 0 0 12px var(--accent-primary)`).
+  - **Transition Animations:** Define `.splash-wrapper.fade-out` where:
+    - The character background scales up and moves upward (`transform: translate(-50%, -55%) scale(1.05); opacity: 0;`).
+    - The central glow halo expands (`transform: scale(2); opacity: 0;`).
+    - The wrapper fades out (`opacity: 0; pointer-events: none;`).
+- Modify the body scroll behavior during splash: lock scroll using `.splash-locked { overflow: hidden; }` on the `body` and remove it once the splash screen is dismissed.
 
-5. **Footer:**
-   - Apply `flex-direction: column` to the footer links container on mobile to prevent clipping.
+#### [MODIFY] [script.js](file:///c:/Users/SHUBHAM/OneDrive/Documents/Portfolio/script.js)
+- Add a lightweight Canvas particle emitter that:
+  - Spawns small orange sparks floating upwards.
+  - Applies slight sinusoidal wave movements and alpha fades as they rise.
+  - Repels or attracts particles slightly based on mouse movements.
+- Implement the click handlers for both `#desktop-cta` and `#mobile-cta`:
+  - When clicked, lock interactive elements, add the `.fade-out` class to the splash overlay.
+  - Remove `.splash-locked` from `body` to restore scrolling.
+  - After the transition ends (e.g. 1500ms), remove the splash HTML element from the DOM or hide it (`display: none`) to optimize performance.
+  - Trigger the portfolio's entrance animations (`.reveal-up` elements in the hero section) immediately upon click so they slide in dynamically as the splash screen fades.
 
-### `index.html`
-
-1. **Mobile Menu Functionality:**
-   - Update the mobile menu HTML to ensure all links (About, Skills, Certifications, Projects, Journey, Contact, Resume) are present.
-   - Add an `onclick="toggleMenu()"` to every link inside the mobile overlay so the menu closes automatically when a link is clicked.
-
-2. **About Page Rotating Roles:**
-   - Remove the static "Computer Science Engineer" heading.
-   - Insert an animated role switcher container using the existing `.rotating-text` CSS animation (or adding a simple JS text rotator) to cycle through: Tech Explorer, AI Builder, Startup Enthusiast, Full Stack Developer, CS Engineer.
+---
 
 ## Verification Plan
-- Open Chrome DevTools and emulate `320px`, `375px`, `390px`, and `430px` breakpoints.
-- **Hero:** Check for overflow and text clipping.
-- **Menu:** Click the hamburger icon to open the menu, ensure links are readable and stacked, then click a link to verify the menu closes.
-- **About:** Verify the role animation transitions smoothly.
-- **Footer & Projects:** Confirm elements stack and wrap correctly without causing horizontal scroll.
+
+### Automated/Local Build Verification
+- Open the application locally and verify that there are no compilation, console, or resource loading errors.
+
+### Manual Verification
+- **Aesthetics Check:** Emulate a widescreen display (≥1024px) and mobile device (<1024px). Ensure the aspect ratio boxes center correctly on black backdrops, and that text overlays align precisely over the mockup image features.
+- **Micro-interactions:** Hover over the desktop glass CTA to check the border-glow and reflection sweep. Verify that the mobile circular button pulses smoothly.
+- **Canvas Particles:** Confirm that the orange particles float upwards and respond to mouse pointer movements.
+- **Transition Animation:** Click the CTA button on both desktop and mobile. Confirm:
+  - The character slides upward.
+  - The orange halo expands outwards.
+  - The splash screen fades smoothly.
+  - Scroll lock on the body is released.
+  - Hero elements slide up immediately during transition.
