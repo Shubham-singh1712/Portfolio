@@ -41,9 +41,8 @@
         <div class="splash-bg-word">THE JOURNEY</div>
 
         <div class="splash-status splash-status-desktop">
-          <div class="splash-status-kicker">EST. 2026</div>
-          <p>STILL BUILDING</p>
-          <p>STILL LEARNING</p>
+          <div class="splash-status-kicker">CHAPTER 01</div>
+          <p>THE STORY BEHIND THE PROJECTS</p>
         </div>
 
         <button id="desktop-cta" class="splash-cta splash-cta-desktop" type="button">
@@ -52,15 +51,22 @@
         </button>
 
         <div class="splash-timeline splash-timeline-desktop" aria-label="Journey timeline">
-          <span>STUDENT</span>
-          <span class="timeline-separator">&bull;</span>
-          <span>DEVELOPER</span>
-          <span class="timeline-separator">&bull;</span>
-          <span>AI BUILDER</span>
-          <span class="timeline-separator">&bull;</span>
-          <span>FREELANCER</span>
-          <span class="timeline-separator">&bull;</span>
-          <span>FUTURE FOUNDER</span>
+          <div class="splash-timeline-track" aria-hidden="true">
+            <span class="splash-timeline-glow"></span>
+            <span class="splash-timeline-progress"></span>
+            <span class="splash-timeline-node splash-timeline-node-active"></span>
+            <span class="splash-timeline-node"></span>
+            <span class="splash-timeline-node"></span>
+            <span class="splash-timeline-node"></span>
+            <span class="splash-timeline-node"></span>
+          </div>
+          <div class="splash-timeline-labels">
+            <span>STUDENT</span>
+            <span>DEVELOPER</span>
+            <span>AI BUILDER</span>
+            <span>FREELANCER</span>
+            <span>FUTURE FOUNDER</span>
+          </div>
         </div>
       </div>
     </div>
@@ -77,12 +83,13 @@
           <p>STILL LEARNING</p>
         </div>
 
-        <button id="mobile-cta" class="splash-cta-mobile" type="button" aria-label="Tap to enter">
-          <span class="splash-cta-mobile-ring" aria-hidden="true"></span>
-          <span class="splash-cta-mobile-icon">&nearr;</span>
-        </button>
-
-        <div class="splash-cta-mobile-label">TAP TO ENTER</div>
+        <div class="mobile-cta">
+          <button id="mobile-cta" class="mobile-cta-button" type="button" aria-label="Tap to enter">
+            <span class="mobile-cta-button-ring" aria-hidden="true"></span>
+            <span class="mobile-cta-icon">&nearr;</span>
+          </button>
+          <span class="mobile-cta-text">TAP TO ENTER</span>
+        </div>
 
         <div class="splash-timeline splash-timeline-mobile" aria-label="Journey timeline">
           <span>STUDENT</span>
