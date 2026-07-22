@@ -563,7 +563,6 @@ ul, ol { list-style: none; }
    TYPOGRAPHY
    ========================================================================== */
 
-
 .label-mono {
   font-family: var(--font-mono);
   font-size: 0.875rem;
@@ -575,11 +574,15 @@ ul, ol { list-style: none; }
   align-items: center;
   gap: 0.5rem;
 }
+
 .heading-massive {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(5rem, 12vw, 12rem); word-wrap: normal; white-space: nowrap;
-  line-height: 1;
+  font-size: clamp(2.5rem, 6.5vw, 6.5rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 0;
 }
@@ -599,12 +602,12 @@ ul, ol { list-style: none; }
 
 .hero-name span {
   display: block;
-  color: #fafaf9;          /* solid white */
+  color: #fafaf9;
 }
 
 .hero-name span.outline {
   color: transparent;
-  -webkit-text-stroke: 2px var(--accent-primary);  /* amber stroke */
+  -webkit-text-stroke: 2px var(--accent-primary);
 }
 
 .heading-section {
