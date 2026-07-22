@@ -114,10 +114,6 @@ function initSplashScreen() {
         return;
     }
 
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const teardownParticles = initSplashParticles(splashWrapper, prefersReducedMotion);
-    let isClosing = false;
-
     const releasePage = () => {
         document.body.classList.remove("splash-active", "splash-locked");
         if (!document.querySelector(".mobile-menu-overlay.is-active")) {
@@ -130,6 +126,18 @@ function initSplashScreen() {
             element.classList.add("is-visible");
         });
     };
+
+    // If page is loaded with a hash (e.g. #about or #contact), immediately dismiss splash screen
+    if (window.location.hash) {
+        splashWrapper.remove();
+        releasePage();
+        revealHero();
+        return;
+    }
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const teardownParticles = initSplashParticles(splashWrapper, prefersReducedMotion);
+    let isClosing = false;
 
     const dismissSplash = () => {
         if (isClosing) {
