@@ -755,6 +755,8 @@ ul, ol { list-style: none; }
   font-size: 1.5rem;
   color: #fff;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .nav-links {
   display: flex;
@@ -1702,6 +1704,9 @@ html, body {
 /* Authenticity Status Card */
 .status-est-pill {
   display: inline-block;
+  width: fit-content;
+  max-width: max-content;
+  margin: 0 auto 2rem auto;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   letter-spacing: 0.2em;
@@ -1710,7 +1715,6 @@ html, body {
   border: 1px solid var(--accent-primary);
   padding: 0.35rem 1.2rem;
   border-radius: 50px;
-  margin-bottom: 2rem;
 }
 
 .status-statement-lines {
